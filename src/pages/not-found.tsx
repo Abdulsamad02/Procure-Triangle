@@ -4,6 +4,7 @@ import { Container } from '../components/ui/container';
 import { Button } from '../components/ui/button';
 import { Home, ArrowLeft } from 'lucide-react';
 import { SEO } from '../components/utils/seo';
+import { getCanonicalUrl } from '../lib/meta-utils';
 
 export function NotFoundPage() {
   return (
@@ -12,7 +13,11 @@ export function NotFoundPage() {
         title="Page Not Found"
         description="Sorry, the page you're looking for can't be found. Navigate back to Rehobothglow Technology's main site."
         ogType="website"
-      />
+        ogUrl={getCanonicalUrl('404')}
+      >
+        {/* Additional meta tags for 404 page */}
+        <meta name="robots" content="noindex, nofollow" />
+      </SEO>
       <Container className="py-16 md:py-24 lg:py-32">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-8 flex justify-center">

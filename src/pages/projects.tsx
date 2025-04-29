@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { MapPin, Calendar, ArrowRight, Filter as FilterIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/utils/seo';
+import { getCanonicalUrl } from '../lib/meta-utils';
 
 // Animation variants
 const fadeIn = {
@@ -196,6 +197,7 @@ export function ProjectsPage() {
         title="Our Projects"
         description="Explore Rehobothglow Technology's portfolio of successful water engineering projects across Nigeria, including water treatment plants, irrigation systems, and production facilities."
         keywords="water engineering projects, Nigeria, municipal water treatment, agricultural irrigation, borehole drilling, water production, case studies"
+        ogUrl={getCanonicalUrl('projects')}
       />
       
       {/* Modern Hero Section */}

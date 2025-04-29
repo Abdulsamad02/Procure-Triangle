@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Filter, Droplet, Droplets, Construction, Gauge, Zap, Beaker, Factory, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/utils/seo';
+import { getCanonicalUrl } from '../lib/meta-utils';
 
 // Animation variants
 const fadeIn = {
@@ -203,6 +204,7 @@ export function ServicesPage() {
         title="Our Services"
         description="Comprehensive water engineering services including water treatment, borehole drilling, irrigation systems, water quality testing, and production systems in Nigeria."
         keywords="water treatment systems, borehole drilling, irrigation systems, water management, water quality testing, wastewater management, bottled water production, sachet water production, Nigeria"
+        ogUrl={getCanonicalUrl('services')}
       />
       
       {/* Modern Hero Section */}

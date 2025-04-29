@@ -6,6 +6,7 @@ import { Card, CardContent } from '../components/ui/card';
 import { Mail, Phone, MapPin, Clock, MessageSquare, AlertCircle, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/utils/seo';
+import { getCanonicalUrl } from '../lib/meta-utils';
 
 // Animation variants
 const fadeIn = {
@@ -148,6 +149,7 @@ export function ContactPage() {
         title="Contact Us"
         description="Get in touch with Rehobothglow Technology's water engineering experts for consultations, quotes, or to discuss your specific water challenges."
         keywords="contact Rehobothglow, water engineering consultation, Nigeria water services, get a quote, water solutions contact"
+        ogUrl={getCanonicalUrl('contact')}
       />
       
       {/* Modern Hero Section */}

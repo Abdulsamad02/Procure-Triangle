@@ -13,9 +13,11 @@ import { BlogPage } from './pages/blog';
 import { ContactPage } from './pages/contact';
 import { NotFoundPage } from './pages/not-found';
 
+const helmetContext = {};
+
 function App() {
   return (
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <Router>
         <ScrollToTop />
         <Routes>

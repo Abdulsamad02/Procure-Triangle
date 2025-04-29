@@ -9,6 +9,7 @@ interface SEOProps {
   ogUrl?: string;
   ogType?: 'website' | 'article';
   twitterCard?: 'summary' | 'summary_large_image';
+  children?: React.ReactNode;
 }
 
 export function SEO({
@@ -19,11 +20,12 @@ export function SEO({
   ogUrl = 'https://rehobothglow.com',
   ogType = 'website',
   twitterCard = 'summary_large_image',
+  children,
 }: SEOProps) {
   const siteTitle = title ? `${title} | Rehobothglow` : 'Rehobothglow';
 
   return (
-    <Helmet>
+    <Helmet prioritizeSeoTags defer={false}>
       {/* Basic Meta Tags */}
       <title>{siteTitle}</title>
       <meta name="description" content={description} />
@@ -45,6 +47,9 @@ export function SEO({
       
       {/* Canonical Link */}
       <link rel="canonical" href={ogUrl} />
+      
+      {/* Additional children elements if provided */}
+      {children}
     </Helmet>
   );
 } 
