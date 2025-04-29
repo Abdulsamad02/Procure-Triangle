@@ -4,7 +4,7 @@ import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
 import { Hero } from '../components/ui/hero';
 import { Card, CardContent } from '../components/ui/card';
-import { Mail, Phone, MapPin, Clock, MessageSquare, AlertCircle, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageSquare, AlertCircle, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -89,6 +89,13 @@ export function ContactPage() {
     //   hours: 'Monday - Friday: 8:00 AM - 5:00 PM',
     // },
   ];
+  
+  // FAQ state
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
   
   // FAQs
   const faqs = [
@@ -385,11 +392,31 @@ export function ContactPage() {
           />
           
           <div className="max-w-3xl mx-auto mt-12">
-            <div className="space-y-6">
+            <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6">
-                  <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-gray-600">{faq.answer}</p>
+                <div 
+                  key={index} 
+                  className="border border-gray-200 rounded-lg overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-gray-50 transition-colors"
+                  >
+                    <h3 className="text-lg font-semibold">{faq.question}</h3>
+                    <div className="flex-shrink-0 text-gray-500">
+                      {openFaqIndex === index ? (
+                        <ChevronUp className="h-5 w-5" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5" />
+                      )}
+                    </div>
+                  </button>
+                  
+                  {openFaqIndex === index && (
+                    <div className="p-4 bg-gray-50 border-t border-gray-200">
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -398,7 +425,7 @@ export function ContactPage() {
               <p className="text-gray-600 mb-4">
                 Don't see your question here? Contact us directly and we'll be happy to help.
               </p>
-              <Button asChild className=" flex gap-2 border border-primary-600 rounded-sm m-auto">
+              <Button asChild className="flex gap-2 border border-primary-600 rounded-sm m-auto">
                 <a href="mailto:info@rehobothglow.com">Email Us Your Question</a>
                 <ArrowRight className="w-4 h-4" />
               </Button>
