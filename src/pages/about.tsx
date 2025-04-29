@@ -6,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Shield, Clock, Users, Target, Award, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/utils/seo';
 
 // Animation variants
 const fadeIn = {
@@ -150,6 +151,12 @@ export function AboutPage() {
 
   return (
     <>
+      <SEO 
+        title="About Us"
+        description="Learn about Rehobothglow Technology - Nigeria's premier water engineering company with over 10 years of excellence in delivering innovative water solutions."
+        keywords="about Rehobothglow, water engineering company, Nigeria, company history, water solutions, team, mission, vision"
+      />
+
       {/* Modern Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">

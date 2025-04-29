@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Mail, Phone, MapPin, Clock, MessageSquare, AlertCircle, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/utils/seo';
 
 // Animation variants
 const fadeIn = {
@@ -143,6 +144,12 @@ export function ContactPage() {
 
   return (
     <>
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Rehobothglow Technology's water engineering experts for consultations, quotes, or to discuss your specific water challenges."
+        keywords="contact Rehobothglow, water engineering consultation, Nigeria water services, get a quote, water solutions contact"
+      />
+      
       {/* Modern Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">

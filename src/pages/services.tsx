@@ -6,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
 import { Filter, Droplet, Droplets, Construction, Gauge, Zap, Beaker, Factory, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/utils/seo';
 
 // Animation variants
 const fadeIn = {
@@ -198,6 +199,12 @@ export function ServicesPage() {
 
   return (
     <>
+      <SEO 
+        title="Our Services"
+        description="Comprehensive water engineering services including water treatment, borehole drilling, irrigation systems, water quality testing, and production systems in Nigeria."
+        keywords="water treatment systems, borehole drilling, irrigation systems, water management, water quality testing, wastewater management, bottled water production, sachet water production, Nigeria"
+      />
+      
       {/* Modern Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">

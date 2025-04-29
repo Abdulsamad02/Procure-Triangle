@@ -6,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
 import { Calendar, User, ArrowRight, Search, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/utils/seo';
 
 // Animation variants
 const fadeIn = {
@@ -103,6 +104,12 @@ export function BlogPage() {
 
   return (
     <>
+      <SEO 
+        title="Blog - Water Engineering Insights"
+        description="Stay updated with the latest trends, technologies, and best practices in water engineering across Nigeria and beyond through our expert articles and insights."
+        keywords="water engineering blog, Nigeria water insights, water treatment articles, irrigation technology, pure water production, water conservation"
+      />
+      
       {/* Modern Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">

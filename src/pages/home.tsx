@@ -6,6 +6,7 @@ import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
 import { Droplet, Droplets, Filter, Construction, Users, Gauge, ArrowRight } from 'lucide-react';
+import { SEO } from '../components/utils/seo';
 
 // Animation variants
 const fadeIn = {
@@ -106,6 +107,12 @@ export function HomePage() {
 
   return (
     <>
+      <SEO
+        title="Home"
+        description="Rehobothglow Technology - Nigeria's leading water engineering company providing innovative water treatment solutions, borehole drilling, and irrigation systems."
+        keywords="water treatment, borehole drilling, irrigation systems, water engineering, Nigeria, Rehobothglow"
+      />
+      
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">

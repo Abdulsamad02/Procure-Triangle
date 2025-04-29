@@ -6,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
 import { MapPin, Calendar, ArrowRight, Filter as FilterIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/utils/seo';
 
 // Animation variants
 const fadeIn = {
@@ -191,6 +192,12 @@ export function ProjectsPage() {
 
   return (
     <>
+      <SEO 
+        title="Our Projects"
+        description="Explore Rehobothglow Technology's portfolio of successful water engineering projects across Nigeria, including water treatment plants, irrigation systems, and production facilities."
+        keywords="water engineering projects, Nigeria, municipal water treatment, agricultural irrigation, borehole drilling, water production, case studies"
+      />
+      
       {/* Modern Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
