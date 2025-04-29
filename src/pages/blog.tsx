@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from '../components/ui/container';
 import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
-import { Hero } from '../components/ui/hero';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, Search, BookOpen } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
 
 // Blog posts data
 const blogPosts = [
@@ -83,13 +99,110 @@ const categories = [
 ];
 
 export function BlogPage() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
   return (
     <>
-      <Hero 
-        title="Water Engineering Insights"
-        subtitle="Stay updated with the latest trends, technologies, and best practices in water engineering"
-        backgroundImage="https://via.placeholder.com/1920x600?text=Blog"
-      />
+      {/* Modern Hero Section */}
+      <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
+          <img 
+            src="https://via.placeholder.com/1920x600?text=Blog" 
+            alt="Water Engineering Insights"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <Container className="relative z-10 text-white">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.div
+                className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+                variants={fadeIn}
+              >
+                <span className="text-sm font-medium">Knowledge & Insights</span>
+              </motion.div>
+              <motion.h1 
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
+                variants={fadeIn}
+              >
+                Water Engineering <span className="text-primary-200">Insights</span>
+              </motion.h1>
+              <motion.p 
+                className="text-xl opacity-90 max-w-2xl mb-8"
+                variants={fadeIn}
+              >
+                Stay updated with the latest trends, technologies, and best practices 
+                in water engineering across Nigeria and beyond.
+              </motion.p>
+              <motion.div 
+                className="flex flex-wrap gap-4"
+                variants={fadeIn}
+              >
+                <div className="relative flex-grow max-w-md">
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    className="w-full h-12 px-5 pr-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  />
+                  <Search className="absolute right-4 top-3.5 h-5 w-5 text-white/70" />
+                </div>
+                <Button size="lg" className="rounded-full px-8" asChild>
+                  <a href="#latest-articles">Browse Articles</a>
+                </Button>
+              </motion.div>
+            </motion.div>
+            
+            <motion.div 
+              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative">
+                <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary-400/20 rounded-full filter blur-3xl"></div>
+                <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
+                  <div className="grid gap-4">
+                    <div className="bg-white/10 rounded-xl overflow-hidden">
+                      <img 
+                        src={blogPosts[0].image} 
+                        alt="Featured article"
+                        className="w-full h-32 object-cover"
+                      />
+                      <div className="p-4">
+                        <div className="text-xs font-medium text-primary-200 mb-1">{blogPosts[0].category}</div>
+                        <h3 className="text-sm font-semibold line-clamp-1">{blogPosts[0].title}</h3>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-1 bg-white/10 rounded-xl p-3">
+                        <BookOpen className="h-5 w-5 text-primary-200 mb-2" />
+                        <div className="text-sm font-medium">Expert Articles</div>
+                      </div>
+                      <div className="flex-1 bg-white/10 rounded-xl p-3">
+                        <Calendar className="h-5 w-5 text-primary-200 mb-2" />
+                        <div className="text-sm font-medium">Regular Updates</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-5 -right-5 bg-primary-500 text-white p-4 rounded-xl shadow-lg">
+                    <div className="text-2xl font-bold">{blogPosts.length}+</div>
+                    <div className="text-sm">Articles</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
+      </section>
       
       {/* Featured Article */}
       <Section>
@@ -144,8 +257,9 @@ export function BlogPage() {
             {categories.map((category, index) => (
               <Button 
                 key={index} 
-                variant={index === 0 ? "default" : "outline"}
+                variant={category === activeCategory ? "default" : "outline"}
                 size="sm"
+                onClick={() => setActiveCategory(category)}
               >
                 {category}
               </Button>
@@ -155,7 +269,7 @@ export function BlogPage() {
       </Section>
       
       {/* Blog Posts Grid */}
-      <Section>
+      <Section id="latest-articles">
         <Container>
           <SectionTitle 
             title="Latest Articles"

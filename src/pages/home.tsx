@@ -148,7 +148,7 @@ export function HomePage() {
                 className="flex flex-wrap gap-4"
                 variants={fadeIn}
               >
-                <Button size="lg" className="rounded-full px-8" asChild>
+                <Button size="lg" className="rounded-full px-8 max-small:px-0" asChild>
                   <Link to="/contact">Get a Free Consultation</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 bg-white/10 text-white border-white hover:bg-white/20" asChild>

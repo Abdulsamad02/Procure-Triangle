@@ -127,7 +127,7 @@ export function Footer() {
                     ))}
                   </ul>
                 </div>
-                <div className="mt-10 md:mt-0">
+                <div className="mt-10 md:mt-0 w-full">
                   <h3 className="text-sm font-semibold leading-6 text-white">Contact Us</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     <li className="flex gap-x-3">
@@ -138,9 +138,9 @@ export function Footer() {
                       <Phone className="h-5 w-5 flex-none text-primary-200" aria-hidden="true" />
                       <span className="text-sm leading-6 text-primary-100">+234 123 456 7890</span>
                     </li>
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-3 flex-wrap">
                       <Mail className="h-5 w-5 flex-none text-primary-200" aria-hidden="true" />
-                      <span className="text-sm leading-6 text-primary-100">info@rehobothglow.com</span>
+                      <span className="text-sm leading-6 text-primary-100 wrap">info@rehobothglow.com</span>
                     </li>
                   </ul>
                 </div>
@@ -149,7 +149,7 @@ export function Footer() {
           </div>
           
           <div className="mt-16 border-t border-primary-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-xs text-primary-200">
+            <div className="text-xs max-md:text-center text-primary-200">
               &copy; {new Date().getFullYear()} Rehoboth Glow Technology Nigeria. All rights reserved.
             </div>
             <div className="mt-4 md:mt-0 flex space-x-6 text-sm">

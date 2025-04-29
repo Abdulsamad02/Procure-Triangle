@@ -32,6 +32,9 @@ module.exports = {
           900: '#00240f',
         },
       },
+      screens: {
+        'small': '480px',
+      },
       animation: {
         'wave': 'wave 10s ease-in-out infinite',
         'fade-in': 'fade-in 0.5s ease-in-out',
