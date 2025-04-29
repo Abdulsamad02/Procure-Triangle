@@ -2,9 +2,25 @@ import React, { useState } from 'react';
 import { Container } from '../components/ui/container';
 import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
-import { Hero } from '../components/ui/hero';
 import { Card, CardContent } from '../components/ui/card';
 import { Mail, Phone, MapPin, Clock, MessageSquare, AlertCircle, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -127,11 +143,118 @@ export function ContactPage() {
 
   return (
     <>
-      <Hero 
-        title="Contact Us"
-        subtitle="Get in touch with our water engineering experts for consultations, quotes, or general inquiries"
-        backgroundImage="https://via.placeholder.com/1920x600?text=Contact+Us"
-      />
+      {/* Modern Hero Section */}
+      <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
+          <img 
+            src="https://via.placeholder.com/1920x600?text=Contact+Us" 
+            alt="Contact Us"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <Container className="relative z-10 text-white">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.div
+                className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+                variants={fadeIn}
+              >
+                <span className="text-sm font-medium">Get In Touch</span>
+              </motion.div>
+              <motion.h1 
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
+                variants={fadeIn}
+              >
+                Contact <span className="text-primary-200">Us</span>
+              </motion.h1>
+              <motion.p 
+                className="text-xl opacity-90 max-w-2xl mb-8"
+                variants={fadeIn}
+              >
+                Reach out to our water engineering experts for consultations, quotes, 
+                or to discuss your specific water challenges.
+              </motion.p>
+              <motion.div 
+                className="flex flex-wrap gap-4"
+                variants={fadeIn}
+              >
+                <Button size="lg" className="rounded-full px-8 gap-2" asChild>
+                  <a href="tel:+2341234567890" className='flex gap-2'>
+                    <Phone className="h-5 w-5" />
+                    <span>Call Now</span>
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-full px-8 gap-2 bg-white/10 text-white border-white hover:bg-white/20" asChild>
+                  <a href="mailto:info@rehobothglow.com" className='flex gap-2'>
+                    <Mail className="h-5 w-5" />
+                    <span>Email Us</span>
+                  </a>
+                </Button>
+              </motion.div>
+            </motion.div>
+            
+            <motion.div 
+              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative">
+                <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary-400/20 rounded-full filter blur-3xl"></div>
+                <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
+                  <div className="space-y-5">
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-full bg-primary-400/30 flex items-center justify-center flex-shrink-0">
+                        <Phone className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <div className="text-sm opacity-80">Call Us</div>
+                        <div className="font-semibold">+234 123 456 7890</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-full bg-primary-400/30 flex items-center justify-center flex-shrink-0">
+                        <Mail className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <div className="text-sm opacity-80">Email Us</div>
+                        <div className="font-semibold">info@rehobothglow.com</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-full bg-primary-400/30 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <div className="text-sm opacity-80">Office Location</div>
+                        <div className="font-semibold">Lagos, Nigeria</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-full bg-primary-400/30 flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <div className="text-sm opacity-80">Working Hours</div>
+                        <div className="font-semibold">Mon-Fri: 8AM-5PM</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
+      </section>
       
       {/* Contact Form Section */}
       <Section>

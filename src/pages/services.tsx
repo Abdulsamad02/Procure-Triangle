@@ -3,9 +3,25 @@ import { Link } from 'react-router-dom';
 import { Container } from '../components/ui/container';
 import { Section } from '../components/ui/section';
 import { Button } from '../components/ui/button';
-import { Hero } from '../components/ui/hero';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
 import { Filter, Droplet, Droplets, Construction, Gauge, Zap, Beaker, Factory, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
 
 export function ServicesPage() {
   // Services data
@@ -182,11 +198,94 @@ export function ServicesPage() {
 
   return (
     <>
-      <Hero 
-        title="Our Services"
-        subtitle="Comprehensive water engineering solutions tailored to your specific needs"
-        backgroundImage="https://via.placeholder.com/1920x600?text=Water+Services"
-      />
+      {/* Modern Hero Section */}
+      <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
+          <img 
+            src="https://via.placeholder.com/1920x600?text=Water+Services" 
+            alt="Water Services"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <Container className="relative z-10 text-white">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.div
+                className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+                variants={fadeIn}
+              >
+                <span className="text-sm font-medium">Comprehensive Water Solutions</span>
+              </motion.div>
+              <motion.h1 
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
+                variants={fadeIn}
+              >
+                Our <span className="text-primary-200">Services</span>
+              </motion.h1>
+              <motion.p 
+                className="text-xl opacity-90 max-w-2xl mb-8"
+                variants={fadeIn}
+              >
+                Tailored water engineering solutions designed to address Nigeria's unique 
+                challenges with innovation, expertise, and sustainability.
+              </motion.p>
+              <motion.div 
+                className="flex flex-wrap gap-4"
+                variants={fadeIn}
+              >
+                <Button size="lg" className="rounded-full px-8" asChild>
+                  <Link to="/contact">Request a Consultation</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-full px-8 bg-white/10 text-white border-white hover:bg-white/20" asChild>
+                  <a href="#water-treatment">Explore Services</a>
+                </Button>
+              </motion.div>
+            </motion.div>
+            
+            <motion.div 
+              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative">
+                <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary-400/20 rounded-full filter blur-3xl"></div>
+                <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
+                      <Filter className="h-8 w-8 mb-2 text-primary-200" />
+                      <div className="font-semibold">Water Treatment</div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
+                      <Droplets className="h-8 w-8 mb-2 text-primary-200" />
+                      <div className="font-semibold">Irrigation Systems</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4 mt-8">
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
+                      <Construction className="h-8 w-8 mb-2 text-primary-200" />
+                      <div className="font-semibold">Borehole Drilling</div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
+                      <Droplet className="h-8 w-8 mb-2 text-primary-200" />
+                      <div className="font-semibold">Pure Water Production</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
+      </section>
       
       {/* Services Overview */}
       <Section>

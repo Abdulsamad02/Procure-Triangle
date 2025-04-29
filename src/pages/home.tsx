@@ -98,18 +98,18 @@ export function HomePage() {
 
   // Stats data
   const stats = [
-    { value: '500+', label: 'Projects Completed' },
-    { value: '25+', label: 'Years Experience' },
+    { value: '50+', label: 'Projects Completed' },
+    { value: '10+', label: 'Years Experience' },
     { value: '98%', label: 'Client Satisfaction' },
-    { value: '30+', label: 'Industry Awards' },
+    { value: '10+', label: 'Industry Awards' },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
+      <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary-800/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
           {/* Placeholder for hero image - replace with actual image */}
           <img 
             src="https://via.placeholder.com/1920x1080?text=Water+Engineering" 
@@ -119,43 +119,72 @@ export function HomePage() {
         </div>
         
         <Container className="relative z-10 text-white">
-          <motion.div 
-            className="max-w-3xl"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-            <motion.h1 
-              className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
-              variants={fadeIn}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              Innovative Water Engineering Solutions for Nigeria's Future
-            </motion.h1>
-            <motion.p 
-              className="text-xl opacity-90 max-w-2xl mb-8"
-              variants={fadeIn}
-            >
-              From water treatment systems to borehole drilling, irrigation projects to pure water production - 
-              Rehoboth Glow Technology provides complete water engineering solutions tailored to your needs.
-            </motion.p>
-            <motion.div 
-              className="flex flex-wrap gap-4"
-              variants={fadeIn}
-            >
-              <Button size="lg" asChild>
-                <Link to="/contact">Get a Free Consultation</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10" asChild>
-                <Link to="/projects">View Our Projects</Link>
-              </Button>
+              <motion.div
+                className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+                variants={fadeIn}
+              >
+                <span className="text-sm font-medium">Nigeria's Premium Water Engineering</span>
+              </motion.div>
+              <motion.h1 
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
+                variants={fadeIn}
+              >
+                Innovative Water Solutions for a Better <span className="text-primary-200">Tomorrow</span>
+              </motion.h1>
+              <motion.p 
+                className="text-xl opacity-90 max-w-2xl mb-8"
+                variants={fadeIn}
+              >
+                From treatment systems to borehole drilling, irrigation to pure water production—we provide 
+                complete water engineering tailored to your needs.
+              </motion.p>
+              <motion.div 
+                className="flex flex-wrap gap-4"
+                variants={fadeIn}
+              >
+                <Button size="lg" className="rounded-full px-8" asChild>
+                  <Link to="/contact">Get a Free Consultation</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-full px-8 bg-white/10 text-white border-white hover:bg-white/20" asChild>
+                  <Link to="/projects">View Our Projects</Link>
+                </Button>
+              </motion.div>
             </motion.div>
-          </motion.div>
+            
+            <motion.div 
+              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative">
+                <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary-400/20 rounded-full filter blur-3xl"></div>
+                <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
+                  <img 
+                    src="https://via.placeholder.com/600x400?text=Water+Solutions" 
+                    alt="Water solutions"
+                    className="w-full h-auto rounded-lg shadow-lg"
+                  />
+                  <div className="absolute -bottom-5 -right-5 bg-primary-500 text-white p-4 rounded-xl shadow-lg">
+                    <div className="text-2xl font-bold">13+</div>
+                    <div className="text-sm">Years of Excellence</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </Container>
         
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
       </section>
       
-      {/* Company Overview */}
       <Section className="bg-white">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 items-center">

@@ -3,9 +3,25 @@ import { Link } from 'react-router-dom';
 import { Container } from '../components/ui/container';
 import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
-import { Hero } from '../components/ui/hero';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Shield, Clock, Users, Target, Award, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
 
 export function AboutPage() {
   // Core values data
@@ -134,11 +150,83 @@ export function AboutPage() {
 
   return (
     <>
-      <Hero 
-        title="About Rehoboth Glow Technology"
-        subtitle="Delivering innovative water engineering solutions across Nigeria since 2012"
-        backgroundImage="https://via.placeholder.com/1920x600?text=About+Us"
-      />
+      {/* Modern Hero Section */}
+      <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
+          <img 
+            src="https://via.placeholder.com/1920x600?text=About+Us" 
+            alt="About Rehoboth Glow Technology"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <Container className="relative z-10 text-white">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.div
+                className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+                variants={fadeIn}
+              >
+                <span className="text-sm font-medium">Our Journey of Excellence</span>
+              </motion.div>
+              <motion.h1 
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
+                variants={fadeIn}
+              >
+                About <span className="text-primary-200">Rehoboth Glow</span> Technology
+              </motion.h1>
+              <motion.p 
+                className="text-xl opacity-90 max-w-2xl mb-8"
+                variants={fadeIn}
+              >
+                Delivering innovative water engineering solutions across Nigeria since 2012,
+                with a commitment to excellence, sustainability, and community impact.
+              </motion.p>
+              <motion.div 
+                className="flex flex-wrap gap-4"
+                variants={fadeIn}
+              >
+                <Button size="lg" className="rounded-full px-8" asChild>
+                  <Link to="/contact">Work With Us</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-full px-8 bg-white/10 text-white border-white hover:bg-white/20" asChild>
+                  <Link to="#team">Meet Our Team</Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+            
+            <motion.div 
+              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative">
+                <div className="absolute -top-8 -left-8 w-64 h-64 bg-primary-400/20 rounded-full filter blur-3xl"></div>
+                <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
+                  <img 
+                    src="https://via.placeholder.com/600x400?text=About+Us" 
+                    alt="About Rehoboth Glow"
+                    className="w-full h-auto rounded-lg shadow-lg"
+                  />
+                  <div className="absolute -bottom-5 -right-5 bg-primary-500 text-white p-4 rounded-xl shadow-lg">
+                    <div className="text-2xl font-bold">12+</div>
+                    <div className="text-sm">Years of Impact</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
+      </section>
       
       {/* Mission and Vision */}
       <Section>
@@ -379,7 +467,7 @@ export function AboutPage() {
                 </div>
                 
                 <div className="pt-4">
-                  <Button className="w-full" asChild className=" flex gap-2 border border-primary-600 rounded-sm">
+                  <Button className="w-full flex gap-2 border border-primary-600 rounded-sm" asChild>
                     <Link to="/contact">Contact Us</Link>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
