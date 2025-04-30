@@ -221,7 +221,7 @@ export function HomePage() {
                 <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
                 <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
                   <img 
-                    src="https://via.placeholder.com/600x400?text=Water+Solutions" 
+                    src="/assets/rb-industry.jpg" 
                     alt="Water solutions"
                     className="w-full h-auto rounded-lg shadow-lg"
                   />
@@ -262,12 +262,12 @@ export function HomePage() {
             </div>
             <div className="relative">
               <img
-                src="https://via.placeholder.com/600x500?text=About+Rehoboth+Glow" 
+                src="/assets/rb-worker-iband-co.jpg" 
                 alt="Rehoboth Glow Team" 
                 className="rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary-500 rounded-lg p-6 shadow-lg">
-                <p className="text-white font-bold text-lg mb-2">25+ Years</p>
+                <p className="text-white font-bold text-lg mb-2">13+ Years</p>
                 <p className="text-white text-sm">Of Water Engineering Excellence</p>
               </div>
             </div>
@@ -322,7 +322,7 @@ export function HomePage() {
             <video 
               ref={videoRef}
               className="w-full h-auto"
-              poster="https://via.placeholder.com/1280x720/1a5f7a/ffffff?text=Rehobothglow+Water+Solutions"
+              poster="/assets/rb-machines-4.webp"
               muted
               playsInline
               loop
@@ -578,6 +578,7 @@ export function HomePage() {
                   <p className="italic text-gray-600 mb-6">{testimonial.content}</p>
                   <div className="flex items-center">
                     <div className="h-12 w-12 rounded-full bg-gray-200 mr-4">
+                      { testimonial.author}
                     </div>
                     <div>
                       <p className="font-semibold">{testimonial.author}</p>

@@ -85,27 +85,13 @@ export function ContactPage() {
   
   // Office locations
   const offices = [
-    // {
-    //   name: 'Headquarters - Abuja',
-    //   address: '123 Water Way, Central Business District, Abuja, Nigeria',
-    //   phone: '+234 123 456 7890',
-    //   email: 'abuja@rehobothglow.com',
-    //   hours: 'Monday - Friday: 8:00 AM - 5:00 PM',
-    // },
     {
-      name: 'Lagos Office',
+      name: 'Abuja Office',
       address: '456 Marina Street, Victoria Island, Lagos, Nigeria',
-      phone: '+234 987 654 3210',
-      email: 'lagos@rehobothglow.com',
+      phone: '+234 810 373 2519',
+      email: 'rehobothglowtech@gmail.com',
       hours: 'Monday - Friday: 8:00 AM - 5:00 PM',
     },
-    // {
-    //   name: 'Port Harcourt Office',
-    //   address: '789 Ada George Road, Port Harcourt, Rivers State, Nigeria',
-    //   phone: '+234 345 678 9012',
-    //   email: 'portharcourt@rehobothglow.com',
-    //   hours: 'Monday - Friday: 8:00 AM - 5:00 PM',
-    // },
   ];
   
   // FAQ state
@@ -194,13 +180,13 @@ export function ContactPage() {
                 variants={fadeIn}
               >
                 <Button size="lg" className="rounded-full px-8 gap-2" asChild>
-                  <a href="tel:+2341234567890" className='flex gap-2'>
+                  <a href="tel:+2348103732519" className='flex gap-2'>
                     <Phone className="h-5 w-5" />
                     <span>Call Now</span>
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 gap-2 bg-white/10 text-white border-white hover:bg-white/20" asChild>
-                  <a href="mailto:info@rehobothglow.com" className='flex gap-2'>
+                  <a href="mailto:rehobothglowtech@gmail.com" className='flex gap-2'>
                     <Mail className="h-5 w-5" />
                     <span>Email Us</span>
                   </a>
@@ -225,7 +211,7 @@ export function ContactPage() {
                       </div>
                       <div>
                         <div className="text-sm opacity-80">Call Us</div>
-                        <div className="font-semibold">+234 123 456 7890</div>
+                        <div className="font-semibold">+234 810 373 2519</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -234,7 +220,7 @@ export function ContactPage() {
                       </div>
                       <div>
                         <div className="text-sm opacity-80">Email Us</div>
-                        <div className="font-semibold">info@rehobothglow.com</div>
+                        <div className="font-semibold">rehobothglowtech@gmail.com</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -243,7 +229,7 @@ export function ContactPage() {
                       </div>
                       <div>
                         <div className="text-sm opacity-80">Office Location</div>
-                        <div className="font-semibold">Lagos, Nigeria</div>
+                        <div className="font-semibold">Abuja, Nigeria</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -286,8 +272,8 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Call Us</h3>
-                    <p className="text-gray-600">+234 123 456 7890</p>
-                    <p className="text-gray-600">+234 987 654 3210</p>
+                    <p className="text-gray-600">+234 810 373 2519</p>
+                    <p className="text-gray-600">+234 807 408 1472</p>
                   </div>
                 </div>
                 
@@ -297,8 +283,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email Us</h3>
-                    <p className="text-gray-600">info@rehobothglow.com</p>
-                    <p className="text-gray-600">projects@rehobothglow.com</p>
+                    <p className="text-gray-600">rehobothglowtech@gmail.com</p>
                   </div>
                 </div>
                 
@@ -308,7 +293,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">WhatsApp</h3>
-                    <p className="text-gray-600">+234 123 456 7890</p>
+                    <p className="text-gray-600">+234 810 373 2519</p>
                     <p className="text-gray-500 text-sm">(For quick inquiries and emergencies)</p>
                   </div>
                 </div>
@@ -319,7 +304,7 @@ export function ContactPage() {
                 <p className="text-gray-600 mb-4">
                   For urgent water system issues or emergencies, please call our 24/7 emergency line:
                 </p>
-                <div className="text-xl font-bold text-primary-700">+234 800 WATER-911</div>
+                  <div className="text-xl font-bold text-primary-700">+234 810 373 2519</div>
               </div>
             </div>
             
@@ -576,16 +561,16 @@ export function ContactPage() {
               Contact us today to discuss how we can help with your water engineering needs.
               We're ready to provide expert consultation and innovative solutions.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
-              <div className="bg-white/10 rounded-lg p-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mx-auto">
+              <div className="bg-white/10 rounded-lg p-6 text-center ">
                 <Phone className="h-8 w-8 mx-auto mb-2" />
                 <p className="text-lg font-semibold">Call Us Now</p>
-                <p className="text-xl font-bold">+234 123 456 7890</p>
+                <p className="text-xl font-bold">+234 810 373 2519</p>
               </div>
               <div className="bg-white/10 rounded-lg p-6 text-center">
                 <Mail className="h-8 w-8 mx-auto mb-2" />
                 <p className="text-lg font-semibold">Email Us</p>
-                <p className="text-xl font-bold">info@rehobothglow.com</p>
+                <p className="text-xl font-bold">rehobothglowtech@gmail.com</p>
               </div>
             </div>
           </div>
