@@ -25,7 +25,6 @@ const staggerContainer = {
 };
 
 export function ServicesPage() {
-  // Services data
   const services = [
     {
       id: 'water-treatment',

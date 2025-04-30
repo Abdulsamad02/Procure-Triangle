@@ -62,22 +62,22 @@ export function AboutPage() {
   // Team members data
   const teamMembers = [
     {
-      name: 'Eng. Samson Idoko',
+      name: 'Engr. Samson Idoko',
       position: 'Founder & CEO',
       bio: 'With over 10 years in water engineering, Samson founded Rehoboth Glow Technology to address Nigeria\'s water challenges through innovative solutions.',
-      imageSrc: '/assets/rb-staff-test.webp',
+      imageSrc: '/assets/rb-engineer-ceo2.jpg',
     },
     {
-      name: 'Dr. Fatima Ibrahim',
-      position: 'Technical Director',
-      bio: 'A PhD in Environmental Engineering, Fatima oversees all technical aspects of our projects, ensuring they meet international standards.',
-      imageSrc: 'https://via.placeholder.com/400x400?text=Technical+Director',
+      name: 'Engr. Abdul Samad',
+      position: 'Engineer',
+      bio: 'A Graduate of Physics from the University of Abuja, Fatima oversees all technical aspects of our projects, ensuring they meet international standards.',
+      imageSrc: '/assets/rb-engineer.jpg',
     },
     {
-      name: 'Eng. Samuel Okonkwo',
-      position: 'Operations Manager',
-      bio: 'Samuel brings 15 years of experience in project management to ensure smooth execution of all water engineering projects.',
-      imageSrc: 'https://via.placeholder.com/400x400?text=Operations+Manager',
+      name: 'Eng. Ibrahim Ibrahim',
+      position: 'Engineer',
+      bio: 'Ibrahim is a graduate of Physics from the University of Abuja, with over 10 years of experience in water engineering.',
+      imageSrc: '/assets/rb-enginerr.jpg',
     },
     {
       name: 'Mrs. Chioma Adeleke',
@@ -207,7 +207,7 @@ export function AboutPage() {
             </div>
             <div>
               <img 
-                src="https://via.placeholder.com/600x400?text=Our+Mission" 
+                src="/assets/rb-series-2.webp" 
                 alt="Rehoboth Glow mission"
                 className="rounded-lg shadow-lg"
               />
