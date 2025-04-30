@@ -41,7 +41,7 @@ export function ServicesPage() {
         'Expert installation and ongoing maintenance support'
       ],
       icon: Filter,
-      image: 'https://via.placeholder.com/800x500?text=Water+Treatment',
+      image: 'assets/rb-series-2.webp',
       caseStudy: {
         title: 'Industrial Water Treatment System for Textile Manufacturer',
         challenge: 'A textile factory in Lagos needed to treat highly contaminated wastewater to meet environmental regulations.',
@@ -62,7 +62,7 @@ export function ServicesPage() {
         'Emergency repair services'
       ],
       icon: Construction,
-      image: 'https://via.placeholder.com/800x500?text=Borehole+Drilling',
+      image: '/assets/rb-machines-4.webp',
       caseStudy: {
         title: 'Community Borehole Project in Rural Kano',
         challenge: 'A village in rural Kano had limited access to clean water, with residents walking several kilometers daily to fetch water.',
@@ -83,7 +83,7 @@ export function ServicesPage() {
         'Integration with existing farming operations'
       ],
       icon: Droplets,
-      image: 'https://via.placeholder.com/800x500?text=Irrigation+Systems',
+      image: 'assets/rb-machines-6.webp',
       caseStudy: {
         title: 'Large-Scale Drip Irrigation for Commercial Farm',
         challenge: 'A 500-acre commercial farm in northern Nigeria needed to maximize water efficiency in a region with inconsistent rainfall.',
@@ -102,9 +102,9 @@ export function ServicesPage() {
         'Regulatory compliance guidance',
         'Reduced operational costs through efficiency',
         'Expert knowledge of Nigerian water challenges and regulations'
-      ],
+      ],  
       icon: Gauge,
-      image: 'https://via.placeholder.com/800x500?text=Water+Management',
+      image: 'assets/rb-machines-4.webp',
       caseStudy: {
         title: 'Municipal Water Management Plan',
         challenge: 'A growing municipality needed to optimize its water distribution system to accommodate population growth while conserving resources.',
@@ -125,7 +125,7 @@ export function ServicesPage() {
         'Quick turnaround times for critical testing needs'
       ],
       icon: Beaker,
-      image: 'https://via.placeholder.com/800x500?text=Water+Quality+Testing',
+      image: 'assets/rb-machine-test.webp',
       caseStudy: {
         title: 'Comprehensive Water Quality Program for Hospital',
         challenge: 'A major hospital needed to ensure consistent water quality throughout its facility, particularly for sensitive medical applications.',
@@ -146,7 +146,7 @@ export function ServicesPage() {
         'Lower long-term operational costs'
       ],
       icon: Zap,
-      image: 'https://via.placeholder.com/800x500?text=Wastewater+Management',
+      image: 'assets/rb-machine-7.webp',
       caseStudy: {
         title: 'Industrial Wastewater Recycling System',
         challenge: 'A manufacturing facility needed to reduce its water consumption and minimize wastewater discharge to meet new environmental regulations.',
@@ -167,7 +167,7 @@ export function ServicesPage() {
         'Ongoing technical support and maintenance'
       ],
       icon: Factory,
-      image: 'https://via.placeholder.com/800x500?text=Bottled+Water+Production',
+      image: 'assets/rb-machine-6.webp',
       caseStudy: {
         title: 'New Bottled Water Production Facility',
         challenge: 'An entrepreneur wanted to establish a premium bottled water brand but lacked technical expertise in water production facilities.',
@@ -188,7 +188,7 @@ export function ServicesPage() {
         'Scalable operations with growth potential'
       ],
       icon: Droplet,
-      image: 'https://via.placeholder.com/800x500?text=Pure+Water+Production',
+      image: 'assets/rb-industry.jpg',
       caseStudy: {
         title: 'Sachet Water Production Upgrade',
         challenge: 'An existing sachet water producer needed to increase capacity and improve quality to meet growing demand and stricter regulations.',
@@ -212,7 +212,7 @@ export function ServicesPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
           <img 
-            src="https://via.placeholder.com/1920x600?text=Water+Services" 
+            src="/assets/rb-machines-4.webp" 
             alt="Water Services"
             className="w-full h-full object-cover"
           />
@@ -248,7 +248,7 @@ export function ServicesPage() {
                 className="flex flex-wrap gap-4"
                 variants={fadeIn}
               >
-                <Button size="lg" className="rounded-full px-8" asChild>
+                <Button size="lg" className="rounded-full px-8 max-small:px-0" asChild>
                   <Link to="/contact">Request a Consultation</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 bg-white/10 text-white border-white hover:bg-white/20" asChild>

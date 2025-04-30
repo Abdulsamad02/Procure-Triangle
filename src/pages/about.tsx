@@ -63,10 +63,10 @@ export function AboutPage() {
   // Team members data
   const teamMembers = [
     {
-      name: 'Eng. Adebayo Johnson',
+      name: 'Eng. Samson Idoko',
       position: 'Founder & CEO',
-      bio: 'With over 25 years in water engineering, Adebayo founded Rehoboth Glow Technology to address Nigeria\'s water challenges through innovative solutions.',
-      imageSrc: 'https://via.placeholder.com/400x400?text=CEO',
+      bio: 'With over 10 years in water engineering, Samson founded Rehoboth Glow Technology to address Nigeria\'s water challenges through innovative solutions.',
+      imageSrc: '/assets/rb-staff-test.webp',
     },
     {
       name: 'Dr. Fatima Ibrahim',
@@ -88,34 +88,6 @@ export function AboutPage() {
     },
   ];
 
-  // Certifications data
-  const certifications = [
-    {
-      name: 'ISO 9001:2015',
-      description: 'Quality Management System',
-    },
-    {
-      name: 'ISO 14001:2015',
-      description: 'Environmental Management System',
-    },
-    {
-      name: 'NAFDAC Certified',
-      description: 'National Agency for Food and Drug Administration and Control',
-    },
-    {
-      name: 'SON Certified',
-      description: 'Standards Organization of Nigeria',
-    },
-    {
-      name: 'COREN Registered',
-      description: 'Council for the Regulation of Engineering in Nigeria',
-    },
-    {
-      name: 'IWWA Member',
-      description: 'International Water Works Association',
-    },
-  ];
-
 
   return (
     <>
@@ -126,12 +98,11 @@ export function AboutPage() {
         ogUrl={getCanonicalUrl('about')}
       />
 
-      {/* Modern Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
           <img 
-            src="https://via.placeholder.com/1920x600?text=About+Us" 
+            src="/assets/rb-facility-3.webp" 
             alt="About Rehoboth Glow Technology"
             className="w-full h-full object-cover"
           />
@@ -187,7 +158,7 @@ export function AboutPage() {
                 <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
                 <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
                   <img 
-                    src="https://via.placeholder.com/600x400?text=About+Us" 
+                    src="/assets/rb-facility-3.webp" 
                     alt="About Rehoboth Glow"
                     className="w-full h-auto rounded-lg shadow-lg"
                   />
@@ -307,52 +278,7 @@ export function AboutPage() {
         </Container>
       </Section>
       
-      {/* Certifications */}
-      <Section>
-        <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <SectionTitle 
-                title="Our Certifications"
-                subtitle="Quality and standards you can trust"
-              />
-              
-              <div className="grid grid-cols-2 gap-6 mt-8">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="h-8 w-8 rounded-full bg-primary-100 flex items-center justify-center mr-3 mt-1">
-                      <Award className="h-4 w-4 text-primary-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">{cert.name}</h4>
-                      <p className="text-sm text-gray-600">{cert.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <Card className="border-none shadow-lg overflow-hidden">
-                <div className="h-80 overflow-hidden">
-                  <img 
-                    src="https://via.placeholder.com/600x400?text=Certifications" 
-                    alt="Rehoboth Glow certifications"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <p className="text-gray-600">
-                    Our certifications and partnerships reflect our commitment to maintaining the highest standards
-                    in water engineering. We adhere to both Nigerian and international standards to ensure the quality
-                    and safety of all our projects.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      
       
       {/* Office Location */}
       <Section className="bg-gray-50">
@@ -385,23 +311,7 @@ export function AboutPage() {
                   <MapPin className="h-5 w-5 text-primary-600 mr-3 mt-1" />
                   <div>
                     <h4 className="font-semibold">Headquarters</h4>
-                    <p className="text-gray-600">123 Water Way, Abuja, Nigeria</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <MapPin className="h-5 w-5 text-primary-600 mr-3 mt-1" />
-                  <div>
-                    <h4 className="font-semibold">Lagos Office</h4>
-                    <p className="text-gray-600">456 Marina Street, Lagos, Nigeria</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <MapPin className="h-5 w-5 text-primary-600 mr-3 mt-1" />
-                  <div>
-                    <h4 className="font-semibold">Port Harcourt Office</h4>
-                    <p className="text-gray-600">789 Ada George Road, Port Harcourt, Nigeria</p>
+                    <p className="text-gray-600">Abuja, Nigeria</p>
                   </div>
                 </div>
                 

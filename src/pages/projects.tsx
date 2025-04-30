@@ -37,11 +37,11 @@ const projects = [
     challenge: 'The rapidly growing community faced water quality issues with high turbidity and bacterial contamination. The existing infrastructure was outdated and insufficient for the population.',
     solution: 'We designed and built a modern water treatment plant utilizing a multi-stage filtration system, UV disinfection, and automated monitoring. The plant was designed for energy efficiency and future capacity expansion.',
     results: 'The new plant provides clean, safe drinking water for the entire community, meeting all Nigerian and WHO water quality standards. Operating costs were reduced by 30% compared to the previous system through energy efficiency measures.',
-    image: 'https://via.placeholder.com/800x500?text=Municipal+Water+Treatment',
+    image: '/assets/rb-worker-ib.jpg',
     images: [
-      'https://via.placeholder.com/800x500?text=Municipal+Plant+1',
-      'https://via.placeholder.com/800x500?text=Municipal+Plant+2',
-      'https://via.placeholder.com/800x500?text=Municipal+Plant+3',
+      '/assets/rb-worker-ib.jpg',
+      '/assets/rb-worker-ib-2.jpg',
+      '/assets/rb-worker-ib-3.jpg',
     ]
   },
   {
@@ -54,11 +54,11 @@ const projects = [
     challenge: 'The farm was facing water scarcity issues and inconsistent rainfall patterns, affecting crop yields and profitability. Traditional irrigation methods were inefficient and labor-intensive.',
     solution: 'We designed and implemented a comprehensive drip irrigation system with soil moisture monitoring, automated controls, and weather-responsive scheduling. The system includes water harvesting and storage components.',
     results: 'The farm reduced water usage by 40% while increasing crop yields by 35% in the first growing season. Labor costs decreased significantly, and the system\'s ROI was achieved within 18 months of operation.',
-    image: 'https://via.placeholder.com/800x500?text=Agricultural+Irrigation',
+    image: 'assets/rb-workers.webp',
     images: [
-      'https://via.placeholder.com/800x500?text=Irrigation+1',
-      'https://via.placeholder.com/800x500?text=Irrigation+2',
-      'https://via.placeholder.com/800x500?text=Irrigation+3',
+      '/assets/rb-workers.webp',
+      '/assets/rb-workers-2.webp',
+      '/assets/rb-workers-3.webp',
     ]
   },
   {
@@ -71,11 +71,11 @@ const projects = [
     challenge: 'The client wanted to enter the premium bottled water market but lacked expertise in production facility design, regulatory compliance, and quality control processes.',
     solution: 'We designed and implemented a complete bottled water production line, including water treatment (reverse osmosis, ozonation, UV), automated bottling, capping, labeling, and packaging systems.',
     results: 'The facility was successfully commissioned and now produces 20,000 bottles per day, with all NAFDAC and SON approvals. The water quality consistently exceeds industry standards, establishing the brand as a premium option in the market.',
-    image: 'https://via.placeholder.com/800x500?text=Bottled+Water+Facility',
+    image: '/assets/rb-worker-ib-2.jpg',
     images: [
-      'https://via.placeholder.com/800x500?text=Bottled+Water+1',
-      'https://via.placeholder.com/800x500?text=Bottled+Water+2',
-      'https://via.placeholder.com/800x500?text=Bottled+Water+3',
+      '/assets/rb-worker-ib-2.jpg',
+      '/assets/rb-worker-ib-2.jpg',
+      '/assets/rb-worker-ib-2.jpg',
     ]
   },
   {
@@ -88,11 +88,11 @@ const projects = [
     challenge: 'The manufacturing facility needed to reduce its water consumption and minimize wastewater discharge to meet new environmental regulations and reduce operational costs.',
     solution: 'We designed and implemented a comprehensive wastewater treatment and recycling system that includes physical, chemical, and biological treatment stages, allowing treated water to be reused in non-critical manufacturing processes.',
     results: 'The facility reduced fresh water consumption by 60% and wastewater discharge by 75%, saving costs and achieving full regulatory compliance. The project received recognition for environmental stewardship from local authorities.',
-    image: 'https://via.placeholder.com/800x500?text=Industrial+Wastewater',
+    image: '/assets/rb-work-2.webp',
     images: [
-      'https://via.placeholder.com/800x500?text=Wastewater+1',
-      'https://via.placeholder.com/800x500?text=Wastewater+2',
-      'https://via.placeholder.com/800x500?text=Wastewater+3',
+      '/assets/rb-work-2.webp',
+      '/assets/rb-work-2.webp',
+      '/assets/rb-work-2.webp',
     ]
   },
   {
@@ -105,11 +105,11 @@ const projects = [
     challenge: 'The village had limited access to clean water, with residents walking several kilometers daily to fetch water. Waterborne diseases were common, and agricultural activities were limited by water scarcity.',
     solution: 'We drilled a 150-meter deep borehole, installed a solar-powered pumping system, constructed a 10,000-liter elevated storage tank, and created multiple distribution points throughout the village.',
     results: 'The community now has reliable access to clean water, improving health outcomes and quality of life for over 2,000 residents. Incidence of waterborne diseases decreased by 85% within six months of project completion.',
-    image: 'https://via.placeholder.com/800x500?text=Community+Borehole',
+    image: '/assets/rb-worker-ib-2.jpg',
     images: [
-      'https://via.placeholder.com/800x500?text=Borehole+1',
-      'https://via.placeholder.com/800x500?text=Borehole+2',
-      'https://via.placeholder.com/800x500?text=Borehole+3',
+      '/assets/rb-worker-ib-2.jpg',
+      '/assets/rb-worker-ib-2.jpg',
+      '/assets/rb-worker-ib-2.jpg',
     ]
   },
   {
@@ -122,11 +122,11 @@ const projects = [
     challenge: 'An existing sachet water producer needed to increase capacity and improve quality to meet growing demand and stricter NAFDAC regulations. The facility was using outdated equipment with frequent breakdowns.',
     solution: 'We redesigned the production system with advanced multi-stage water treatment (including ultrafiltration and UV disinfection) and installed a high-speed automated packaging line with real-time quality monitoring.',
     results: 'Production capacity increased by 300%, quality improved to exceed regulatory standards, and operational costs per unit decreased by 25%. The facility now operates 24/7 with minimal downtime.',
-    image: 'https://via.placeholder.com/800x500?text=Sachet+Water+Upgrade',
+    image: '/assets/rb-staff-test.webp',
     images: [
-      'https://via.placeholder.com/800x500?text=Sachet+Water+1',
-      'https://via.placeholder.com/800x500?text=Sachet+Water+2',
-      'https://via.placeholder.com/800x500?text=Sachet+Water+3',
+      '/assets/rb-staff-test.webp',
+      '/assets/rb-staff-test.webp',
+      '/assets/rb-staff-test.webp',
     ]
   },
   {
@@ -139,11 +139,11 @@ const projects = [
     challenge: 'A major hospital needed to ensure consistent water quality throughout its facility, particularly for sensitive areas like operating rooms, dialysis units, and laboratories.',
     solution: 'We implemented a multi-tiered water treatment system with specialized filtration for different hospital areas, real-time monitoring with alerts for quality parameters, and emergency backup systems.',
     results: 'The hospital has maintained perfect compliance with health standards and prevented potential contamination incidents through early detection. The system has been recognized as a model for healthcare water quality management in Nigeria.',
-    image: 'https://via.placeholder.com/800x500?text=Hospital+Water+Quality',
+    image: '/assets/rb-staff-test.webp',
     images: [
-      'https://via.placeholder.com/800x500?text=Hospital+1',
-      'https://via.placeholder.com/800x500?text=Hospital+2',
-      'https://via.placeholder.com/800x500?text=Hospital+3',
+      '/assets/rb-staff-test.webp',
+      '/assets/rb-staff-test.webp',
+      '/assets/rb-staff-test.webp',
     ]
   },
   {
@@ -156,11 +156,11 @@ const projects = [
     challenge: 'The hotel required consistent, high-quality water for guest rooms, restaurants, swimming pools, and laundry services, while operating in an area with unreliable municipal water supply.',
     solution: 'We designed and implemented a complete water treatment plant with primary, secondary, and tertiary treatment stages, water storage, and distribution systems tailored to the specific needs of each hotel department.',
     results: 'The hotel now enjoys uninterrupted supply of high-quality water for all operations, meeting international hospitality standards. Guest satisfaction scores for water quality increased from 65% to 98%.',
-    image: 'https://via.placeholder.com/800x500?text=Hotel+Water+Treatment',
+    image: '/assets/rb-staff-on-machine.webp',
     images: [
-      'https://via.placeholder.com/800x500?text=Hotel+1',
-      'https://via.placeholder.com/800x500?text=Hotel+2',
-      'https://via.placeholder.com/800x500?text=Hotel+3',
+      '/assets/rb-staff-on-machine.webp',
+      '/assets/rb-staff-on-machine.webp',
+      '/assets/rb-staff-on-machine.webp',
     ]
   },
 ];
@@ -205,7 +205,7 @@ export function ProjectsPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
           <img 
-            src="https://via.placeholder.com/1920x600?text=Projects" 
+            src="/assets/rb-machines-4.webp" 
             alt="Our Projects"
             className="w-full h-full object-cover"
           />
@@ -262,22 +262,22 @@ export function ProjectsPage() {
                 <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
                   <div className="grid grid-cols-2 gap-3">
                     <img 
-                      src="https://via.placeholder.com/300x200?text=Project+1" 
+                      src="/assets/rb-worker-ib.jpg" 
                       alt="Project showcase 1"
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
                     <img 
-                      src="https://via.placeholder.com/300x200?text=Project+2" 
+                      src="/assets/rb-workers.webp" 
                       alt="Project showcase 2"
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
                     <img 
-                      src="https://via.placeholder.com/300x200?text=Project+3" 
+                      src="/assets/rb-worker-ib-2.jpg" 
                       alt="Project showcase 3"
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
                     <img 
-                      src="https://via.placeholder.com/300x200?text=Project+4" 
+                      src="/assets/rb-work-2.webp" 
                       alt="Project showcase 4"
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
@@ -390,7 +390,7 @@ export function ProjectsPage() {
           <div className="grid md:grid-cols-2 gap-12 mt-12 items-center">
             <div>
               <img 
-                src="https://via.placeholder.com/800x600?text=Featured+Project" 
+                src="/assets/rb-worker-ib.jpg" 
                 alt="Featured water engineering project"
                 className="rounded-lg shadow-lg"
               />

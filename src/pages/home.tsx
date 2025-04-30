@@ -104,21 +104,21 @@ export function HomePage() {
       title: 'Municipal Water Treatment Plant',
       location: 'Lagos, Nigeria',
       description: 'Design and implementation of a 50,000 GPD municipal water treatment facility.',
-      imageSrc: 'https://via.placeholder.com/600x400?text=Water+Treatment+Plant',
+      imageSrc: '/assets/rb-worker-ib.jpg',
       href: '/projects/municipal-water-treatment'
     },
     {
       title: 'Agricultural Irrigation System',
       location: 'Kano, Nigeria',
       description: 'Large-scale irrigation system for a 500-acre commercial farm.',
-      imageSrc: 'https://via.placeholder.com/600x400?text=Irrigation+System',
+      imageSrc: '/assets/rb-workers.webp',
       href: '/projects/agricultural-irrigation'
     },
     {
       title: 'Bottled Water Production Facility',
       location: 'Abuja, Nigeria',
       description: 'Complete engineering and setup of a bottled water production facility.',
-      imageSrc: 'https://via.placeholder.com/600x400?text=Bottled+Water+Facility',
+      imageSrc: '/assets/rb-worker-ib-2.jpg',
       href: '/projects/bottled-water-facility'
     },
   ];
@@ -163,9 +163,8 @@ export function HomePage() {
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
-          {/* Placeholder for hero image - replace with actual image */}
           <img 
-            src="https://via.placeholder.com/1920x1080?text=Water+Engineering" 
+            src="/assets/rb-industry.jpg" 
             alt="Water engineering" 
             className="w-full h-full object-cover"
           />
@@ -239,7 +238,7 @@ export function HomePage() {
       </section>
       
       {/* About Section */}
-      <Section className="bg-white">
+      <Section className="bg-white max-sm:pb-0">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -266,7 +265,7 @@ export function HomePage() {
                 alt="Rehoboth Glow Team" 
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary-500 rounded-lg p-6 shadow-lg">
+              <div className="absolute -bottom-6 -left-6 bg-primary-500 rounded-lg p-6 shadow-lg max-sm:hidden">
                 <p className="text-white font-bold text-lg mb-2">13+ Years</p>
                 <p className="text-white text-sm">Of Water Engineering Excellence</p>
               </div>
@@ -278,7 +277,7 @@ export function HomePage() {
       {/* Video Showcase Section */}
       <Section className="bg-gradient-to-b from-white to-gray-50 py-20 relative">
         {/* Decorative waves */}
-        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-0 transform translate-y-[-1px]">
+        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-0 transform translate-y-[-1px] max-sm:hidden">
           <svg className="relative block w-full h-[40px] md:h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
           </svg>
@@ -418,7 +417,7 @@ export function HomePage() {
         </Container>
         
         {/* Decorative bottom waves */}
-        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-0 transform translate-y-[1px]">
+        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-0 transform translate-y-[1px] max-sm:hidden">
           <svg className="relative block w-full h-[40px] md:h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-gray-50"></path>
           </svg>
@@ -577,8 +576,8 @@ export function HomePage() {
                   <div className="text-4xl text-primary-300 mb-4">"</div>
                   <p className="italic text-gray-600 mb-6">{testimonial.content}</p>
                   <div className="flex items-center">
-                    <div className="h-12 w-12 rounded-full bg-gray-200 mr-4">
-                      { testimonial.author}
+                    <div className="h-12 w-12 rounded-full bg-gray-200 mr-4 flex items-center justify-center text-primary-600 font-semibold">
+                      {testimonial.author.split(' ').map(name => name[0]).join('')}
                     </div>
                     <div>
                       <p className="font-semibold">{testimonial.author}</p>

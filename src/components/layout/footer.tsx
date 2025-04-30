@@ -132,7 +132,7 @@ export function Footer() {
                   <ul role="list" className="mt-6 space-y-4">
                     <li className="flex gap-x-3">
                       <MapPin className="h-5 w-5 flex-none text-primary-200" aria-hidden="true" />
-                      <span className="text-sm leading-6 text-primary-100">123 Water Way, Abuja, Nigeria</span>
+                      <span className="text-sm leading-6 text-primary-100"> Abuja, Nigeria</span>
                     </li>
                     <li className="flex gap-x-3">
                       <Phone className="h-5 w-5 flex-none text-primary-200" aria-hidden="true" />
