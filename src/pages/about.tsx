@@ -116,39 +116,6 @@ export function AboutPage() {
     },
   ];
 
-  // Timeline data
-  const timeline = [
-    {
-      year: '2012',
-      title: 'Company Founded',
-      description: 'Rehoboth Glow Technology was established in Abuja, Nigeria.',
-    },
-    {
-      year: '2013',
-      title: 'First Major Project',
-      description: 'Completed our first large-scale municipal water treatment plant.',
-    },
-    {
-      year: '2015',
-      title: 'Expansion',
-      description: 'Opened additional offices in Lagos and Port Harcourt.',
-    },
-    {
-      year: '2017',
-      title: 'ISO Certification',
-      description: 'Achieved ISO 9001 and 14001 certifications.',
-    },
-    {
-      year: '2018',
-      title: 'Pure Water Division',
-      description: 'Launched specialized division for bottled and sachet water production systems.',
-    },
-    {
-      year: '2022',
-      title: 'Innovation Award',
-      description: 'Received National Innovation Award for water conservation technology.',
-    },
-  ];
 
   return (
     <>
@@ -279,44 +246,7 @@ export function AboutPage() {
         </Container>
       </Section>
       
-      {/* Company History */}
-      <Section className="bg-gray-50">
-        <Container>
-          <SectionTitle 
-            title="Our History"
-            subtitle="The journey of Rehoboth Glow Technology from inception to becoming a leading water engineering company in Nigeria"
-          />
-          
-          <div className="mt-12 relative">
-            {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 h-full w-1 bg-primary-200 transform md:translate-x-0 translate-x-5"></div>
-            
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div key={index} className={`relative flex flex-col md:flex-row md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-end md:pr-12">
-                    <div className={`relative ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                      <div className="absolute top-2 left-[-2.5rem] md:left-auto md:right-[-2.5rem] rounded-full h-10 w-10 bg-primary-500 flex items-center justify-center text-white font-bold z-10">
-                        {item.year}
-                      </div>
-                      <Card className="max-w-md">
-                        <CardHeader>
-                          <CardTitle>{item.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <CardDescription>{item.description}</CardDescription>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                  
-                  <div className="md:w-1/2 md:pl-12"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
+
       
       {/* Core Values */}
       <Section>

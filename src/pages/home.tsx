@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Container } from '../components/ui/container';
 import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
-import { Droplet, Droplets, Filter, Construction, Users, Gauge, ArrowRight } from 'lucide-react';
+import { Droplet, Droplets, Filter, Construction, Users, Gauge, ArrowRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import { SEO } from '../components/utils/seo';
 import { getCanonicalUrl } from '../lib/meta-utils';
 
@@ -26,6 +26,50 @@ const staggerContainer = {
 };
 
 export function HomePage() {
+  // State for video controls
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const isVideoInView = useInView(videoContainerRef, { once: false, amount: 0.3 });
+  
+  // Play/pause video based on visibility
+  useEffect(() => {
+    if (!videoRef.current) return;
+    
+    if (isVideoInView && isPlaying) {
+      videoRef.current.play().catch(() => {
+        // Auto-play might be blocked by browser
+        setIsPlaying(false);
+      });
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isVideoInView, isPlaying]);
+  
+  // Handle video controls
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play().catch(() => {
+        // Auto-play might be blocked by browser
+        setIsPlaying(false);
+      });
+      setIsPlaying(true);
+    }
+  };
+  
+  const toggleMute = () => {
+    if (!videoRef.current) return;
+    
+    videoRef.current.muted = !isMuted;
+    setIsMuted(!isMuted);
+  };
+
   // Services data
   const services = [
     {
@@ -194,6 +238,7 @@ export function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
       </section>
       
+      {/* About Section */}
       <Section className="bg-white">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -230,6 +275,157 @@ export function HomePage() {
         </Container>
       </Section>
       
+      {/* Video Showcase Section */}
+      <Section className="bg-gradient-to-b from-white to-gray-50 py-20 relative">
+        {/* Decorative waves */}
+        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-0 transform translate-y-[-1px]">
+          <svg className="relative block w-full h-[40px] md:h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
+          </svg>
+        </div>
+        
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <motion.h2 
+              className="text-3xl font-bold tracking-tight sm:text-4xl mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              See Our Water Engineering Solutions in Action
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-600"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              Watch how we transform water challenges into sustainable solutions
+            </motion.p>
+          </div>
+          
+          <motion.div 
+            ref={videoContainerRef}
+            className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl"
+            style={{ maxWidth: "900px" }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {/* Video overlay gradients for better text visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 z-10"></div>
+            
+            {/* Example placeholder video - replace with your actual video */}
+            <video 
+              ref={videoRef}
+              className="w-full h-auto"
+              poster="https://via.placeholder.com/1280x720/1a5f7a/ffffff?text=Rehobothglow+Water+Solutions"
+              muted
+              playsInline
+              loop
+            >
+              {/* Replace these with your actual video sources */}
+              <source src="/videos/VideoBg.mp4" type="video/mp4" />
+              <source src="/videos/rehobothglow-showcase.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+            
+            {/* Video controls */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center z-20">
+              <div className="flex items-center gap-3">
+                <button 
+                  onClick={togglePlay}
+                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all"
+                  aria-label={isPlaying ? "Pause video" : "Play video"}
+                >
+                  {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
+                </button>
+                <button 
+                  onClick={toggleMute}
+                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all"
+                  aria-label={isMuted ? "Unmute video" : "Mute video"}
+                >
+                  {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
+                </button>
+              </div>
+              
+              <div className="text-white text-lg md:text-xl font-medium drop-shadow-md">
+                Transforming Water Challenges
+              </div>
+            </div>
+            
+            {/* Play button overlay for center of video */}
+            {!isPlaying && (
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <button 
+                  onClick={togglePlay}
+                  className="bg-primary-500 hover:bg-primary-600 text-white p-6 rounded-full transition-all transform hover:scale-105"
+                  aria-label="Play video"
+                >
+                  <Play className="h-10 w-10" />
+                </button>
+              </div>
+            )}
+          </motion.div>
+          
+          {/* Video info cards */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="h-12 w-12 rounded-lg bg-primary-100 flex items-center justify-center mb-4">
+                <Filter className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Innovative Technology</h3>
+              <p className="text-gray-600">See our state-of-the-art water treatment technologies and processes in action.</p>
+            </motion.div>
+            
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="h-12 w-12 rounded-lg bg-primary-100 flex items-center justify-center mb-4">
+                <Construction className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Expert Implementation</h3>
+              <p className="text-gray-600">Witness our skilled team bringing water engineering solutions to life across Nigeria.</p>
+            </motion.div>
+            
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="h-12 w-12 rounded-lg bg-primary-100 flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Community Impact</h3>
+              <p className="text-gray-600">Discover how our solutions are transforming communities and improving lives.</p>
+            </motion.div>
+          </div>
+        </Container>
+        
+        {/* Decorative bottom waves */}
+        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-0 transform translate-y-[1px]">
+          <svg className="relative block w-full h-[40px] md:h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-gray-50"></path>
+          </svg>
+        </div>
+      </Section>
+      
+      {/* Services Section */}
       <Section className="bg-gray-50">
         <Container>
           <SectionTitle 
@@ -251,7 +447,7 @@ export function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>{service.description}</CardDescription>
-                  </CardContent>
+                </CardContent>
                 </div>
                   
                 <CardFooter>
@@ -409,7 +605,7 @@ export function HomePage() {
         </Container>
       </Section>
       
-      {/* Latest Blog Posts */}
+      {/* Latest Blog Posts
       <Section>
         <Container>
           <SectionTitle 
@@ -486,7 +682,7 @@ export function HomePage() {
             </Button>
           </div>
         </Container>
-      </Section>
+      </Section> */}
       
       {/* Newsletter */}
       <Section className="bg-gray-50">
