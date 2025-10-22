@@ -10,7 +10,7 @@ export function NotFoundPage() {
     <>
       <SEO
         title="Page Not Found"
-        description="Sorry, the page you're looking for can't be found. Navigate back to Rehobothglow Technology's main site."
+  description="Sorry, the page you're looking for can't be found. Navigate back to ProcureTriangle Technology's main site."
         ogType="website"
         ogUrl={getCanonicalUrl('404')}
       >

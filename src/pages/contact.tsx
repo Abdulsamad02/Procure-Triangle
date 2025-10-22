@@ -539,7 +539,7 @@ export function ContactPage() {
                 Don't see your question here? Contact us directly and we'll be happy to help.
               </p>
               <Button asChild className="flex gap-2 border border-primary-600 rounded-sm m-auto">
-                <a href="mailto:info@rehobothglow.com">Email Us Your Question</a>
+                <a href="mailto:info@procuretriangle.com">Email Us Your Question</a>
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </div>

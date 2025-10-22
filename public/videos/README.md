@@ -1,16 +1,16 @@
-# Video Assets for Rehobothglow Website
+# Video Assets for ProcureTriangle Website
 
-This directory contains video assets for the Rehobothglow website.
+This directory contains video assets for the ProcureTriangle website.
 
 ## Required Videos
 
-### rehobothglow-showcase.mp4 / rehobothglow-showcase.webm
+### ProcureTriangle-showcase.mp4 / ProcureTriangle-showcase.webm
 - This is the main showcase video that appears on the homepage
 - Recommended resolution: 1280x720 (HD) or 1920x1080 (Full HD)
 - Recommended length: 60-90 seconds
 - Content should showcase:
-  - Water treatment facilities
-  - Borehole drilling operations
+  -  treatment facilities
+  - consultancy operations
   - Irrigation system installations
   - The team working on projects
   - Before and after transformations

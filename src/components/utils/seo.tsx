@@ -13,16 +13,16 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'Rehobothglow',
-  description = 'Rehobothglow - Your trusted partner for innovative solutions',
-  keywords = 'rehobothglow, services, solutions',
+  title = 'ProcureTriangle',
+  description = 'ProcureTriangle - Your trusted partner for innovative solutions',
+  keywords = 'procuretriangle, services, solutions',
   ogImage = '/og-image.jpg',
-  ogUrl = 'https://rehobothglow.com',
+  ogUrl = 'https://procuretriangle.com',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   children,
 }: SEOProps) {
-  const siteTitle = title ? `${title} | Rehobothglow` : 'Rehobothglow';
+  const siteTitle = title ? `${title} | ProcureTriangle` : 'ProcureTriangle';
 
   return (
     <Helmet prioritizeSeoTags defer={false}>

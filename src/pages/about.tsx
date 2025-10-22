@@ -96,7 +96,7 @@ export function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
           <img 
             src="/assets/rb-facility-3.webp" 
-            alt="About Rehoboth Glow Technology"
+            alt="About ProcureTriangle"
             className="w-full h-full object-cover"
           />
         </div>
@@ -200,7 +200,7 @@ export function AboutPage() {
             <div>
               <img 
                 src="/assets/logo.jpg" 
-                alt="Rehoboth Glow mission"
+                alt="ProcureTriangle mission"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -242,7 +242,7 @@ export function AboutPage() {
         <Container>
           <SectionTitle 
             title="Meet Our Team"
-            subtitle="The experts behind Rehoboth Glow Technology's innovative water solutions"
+            subtitle="The experts behind ProcureTriangle Technology's innovative water solutions"
             centered
           />
           

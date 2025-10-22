@@ -389,7 +389,7 @@ export function ServicesPage() {
             </h2>
             <p className="text-xl mb-8">
               Our team of experts is ready to develop a customized solution for your specific water challenges.
-              Contact us today for a consultation and discover how Rehoboth Glow Technology can help.
+              Contact us today for a consultation and discover how ProcureTriangle Technology can help.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-white text-primary-700 hover:bg-gray-100" asChild>

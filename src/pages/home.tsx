@@ -5,7 +5,7 @@ import { Container } from '../components/ui/container';
 import { Section, SectionTitle } from '../components/ui/section';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
-import { Droplet, Droplets, Filter, Construction, Users, Gauge, ArrowRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { Droplet, Droplets, Filter, Construction, Users, Gauge, ArrowRight,} from 'lucide-react';
 import { SEO } from '../components/utils/seo';
 import { getCanonicalUrl } from '../lib/meta-utils';
 
@@ -28,7 +28,6 @@ const staggerContainer = {
 export function HomePage() {
   // State for video controls
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const isVideoInView = useInView(videoContainerRef, { once: false, amount: 0.3 });
@@ -48,27 +47,27 @@ export function HomePage() {
   }, [isVideoInView, isPlaying]);
   
   // Handle video controls
-  const togglePlay = () => {
-    if (!videoRef.current) return;
+  // const togglePlay = () => {
+  //   if (!videoRef.current) return;
     
-    if (isPlaying) {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      videoRef.current.play().catch(() => {
-        // Auto-play might be blocked by browser
-        setIsPlaying(false);
-      });
-      setIsPlaying(true);
-    }
-  };
+  //   if (isPlaying) {
+  //     videoRef.current.pause();
+  //     setIsPlaying(false);
+  //   } else {
+  //     videoRef.current.play().catch(() => {
+         
+  //       setIsPlaying(false);
+  //     });
+  //     setIsPlaying(true);
+  //   }
+  // };
   
-  const toggleMute = () => {
-    if (!videoRef.current) return;
+  // const toggleMute = () => {
+  //   if (!videoRef.current) return;
     
-    videoRef.current.muted = !isMuted;
-    setIsMuted(!isMuted);
-  };
+  //   videoRef.current.muted = !isMuted;
+  //   setIsMuted(!isMuted);
+  // };
 
   // Services data
   const services = [
@@ -82,7 +81,7 @@ export function HomePage() {
       title: 'Urban & Rural Development Projects',
       description: 'Supporting sustainable development initiatives in both urban and rural areas..',
       icon: Construction,
-      href: '/services#borehole-drilling'
+      href: '/services#consultancy-services'
     },
     {
       title: 'Environmental & Safety Compliance',
@@ -262,7 +261,7 @@ export function HomePage() {
             <div className="relative">
               <img
                 src="/assets/rb-worker-iband-co.jpg" 
-                alt="Rehoboth Glow Team" 
+                alt="Procure Triangle Team" 
                 className="rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary-500 rounded-lg p-6 shadow-lg max-sm:hidden">

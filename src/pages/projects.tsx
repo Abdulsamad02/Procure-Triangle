@@ -195,7 +195,7 @@ export function ProjectsPage() {
     <>
       <SEO 
         title="Our Projects"
-        description="Explore Rehobothglow Technology's portfolio of successful water engineering projects across Nigeria, including water treatment plants, irrigation systems, and production facilities."
+  description="Explore ProcureTriangle Technology's portfolio of successful water engineering projects across Nigeria, including water treatment plants, irrigation systems, and production facilities."
         keywords="water engineering projects, Nigeria, municipal water treatment, agricultural irrigation, borehole drilling, water production, case studies"
         ogUrl={getCanonicalUrl('projects')}
       />
@@ -452,7 +452,7 @@ export function ProjectsPage() {
               Ready to Start Your Own Water Project?
             </h2>
             <p className="text-xl mb-8">
-              Let's discuss how Rehoboth Glow Technology can help solve your water engineering challenges
+              Let's discuss how ProcureTriangle Technology can help solve your water engineering challenges
               with innovative, sustainable solutions tailored to your needs.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
