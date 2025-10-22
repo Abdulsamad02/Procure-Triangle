@@ -3,7 +3,7 @@ import { Container } from '../components/ui/container';
 import { Section } from '../components/ui/section';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
-import { Filter, Droplet, Droplets, Construction, Gauge, Zap, Beaker, Factory, ArrowRight } from 'lucide-react';
+import { Filter, Droplet, Droplets, Construction, Gauge, Zap, Beaker, Factory, ArrowRight, Leaf } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/utils/seo';
 import { getCanonicalUrl } from '../lib/meta-utils';
@@ -28,170 +28,149 @@ export function ServicesPage() {
   const services = [
     {
       id: 'water-treatment',
-      title: 'Water Treatment Systems',
-      description: 'Comprehensive water treatment solutions designed for industrial, commercial, and residential applications.',
-      longDescription: 'Our water treatment systems are designed to remove contaminants, improve water quality, and ensure regulatory compliance. We design, install, and maintain systems of all sizes, from small residential units to large industrial plants.',
+      title: 'Project & Contract Execution',
+      description: 'Professional execution of government and private sector projects with transparency, efficiency, and accountability.',
+      longDescription: 'We handle the full lifecycle of project execution  from proposal and contract management to implementation and monitoring. Our experienced team ensures that all projects meet client objectives, timelines, and regulatory standards while upholding integrity and quality at every stage.',
       benefits: [
-        'Improved water quality and safety',
-        'Compliance with Nigerian water quality standards',
-        'Reduced maintenance costs and system downtime',
-        'Customized solutions based on specific water conditions',
-        'Expert installation and ongoing maintenance support'
+      'Transparent project planning and reporting',
+      'Efficient execution and supervision',
+      'Regulatory and contractual compliance',
+      'Risk assessment and mitigation strategies',
+      'On-time and cost-effective project delivery'
       ],
-      icon: Filter,
-      image: 'assets/rb-series-2.webp',
+      icon: Construction,
+      image: 'assets/Project-1.jpg',
       caseStudy: {
-        title: 'Industrial Water Treatment System for Textile Manufacturer',
-        challenge: 'A textile factory in Lagos needed to treat highly contaminated wastewater to meet environmental regulations.',
-        solution: 'We designed and implemented a comprehensive water treatment system with advanced filtration and chemical treatment processes.',
-        result: 'The system successfully reduced contaminants by 95%, bringing the wastewater within regulatory limits and allowing for safe discharge.'
+      title: 'Healthcare Infrastructure Development for State Government',
+      challenge: 'A state government required the construction and supervision of multiple primary healthcare centers across rural communities.',
+      solution: 'We executed the full project lifecycle — from feasibility studies to site management and final handover — ensuring compliance with national health infrastructure standards.',
+      result: 'All centers were delivered within 8 months, improving healthcare access for over 120,000 residents.'
       }
     },
     {
       id: 'borehole-drilling',
-      title: 'Borehole Drilling & Maintenance',
-      description: 'Expert borehole drilling services using state-of-the-art equipment and advanced techniques.',
-      longDescription: 'Our professional borehole drilling services provide reliable access to groundwater for various needs. We utilize modern drilling equipment and techniques to ensure efficiency, durability, and water quality. We also provide maintenance services to keep your borehole systems functioning optimally.',
-      benefits: [
-        'Access to clean, reliable groundwater sources',
-        'Professional site assessment and water quality testing',
-        'Modern drilling techniques for minimal environmental impact',
-        'Comprehensive maintenance programs to extend system lifespan',
-        'Emergency repair services'
-      ],
-      icon: Construction,
-      image: '/assets/rb-machines-4.webp',
-      caseStudy: {
-        title: 'Community Borehole Project in Rural Kano',
-        challenge: 'A village in rural Kano had limited access to clean water, with residents walking several kilometers daily to fetch water.',
-        solution: 'We drilled a 150-meter deep borehole and installed a solar-powered pumping system with distribution points throughout the village.',
-        result: 'The community now has reliable access to clean water, improving health outcomes and quality of life for over 2,000 residents.'
-      }
-    },
-    {
-      id: 'irrigation-systems',
-      title: 'Irrigation System Design & Installation',
-      description: 'Efficient irrigation solutions for agricultural projects of all sizes across Nigeria.',
-      longDescription: 'Our irrigation systems are designed to maximize water efficiency while ensuring optimal crop growth. We provide custom solutions for farms of all sizes, from small holdings to large commercial operations, incorporating advanced technologies like drip irrigation, sprinklers, and automated control systems.',
-      benefits: [
-        'Water conservation through efficient distribution',
-        'Increased crop yields and quality',
-        'Reduced labor costs through automation',
-        'Customized designs based on crop types and soil conditions',
-        'Integration with existing farming operations'
-      ],
-      icon: Droplets,
-      image: 'assets/rb-machines-6.webp',
-      caseStudy: {
-        title: 'Large-Scale Drip Irrigation for Commercial Farm',
-        challenge: 'A 500-acre commercial farm in northern Nigeria needed to maximize water efficiency in a region with inconsistent rainfall.',
-        solution: 'We designed and installed a comprehensive drip irrigation system with weather monitoring and automated controls.',
-        result: 'The farm reduced water usage by 40% while increasing crop yields by 35% in the first growing season after installation.'
-      }
-    },
-    {
-      id: 'water-management',
-      title: 'Water Resource Management Consultancy',
-      description: 'Expert consulting services for sustainable water resource planning and management.',
-      longDescription: 'Our water resource management consultancy helps organizations develop sustainable water strategies. We conduct comprehensive assessments, develop management plans, and provide ongoing guidance to optimize water usage, ensure regulatory compliance, and promote conservation.',
-      benefits: [
-        'Comprehensive water resource assessments',
-        'Sustainable water usage strategies',
-        'Regulatory compliance guidance',
-        'Reduced operational costs through efficiency',
-        'Expert knowledge of Nigerian water challenges and regulations'
-      ],  
+    title: 'Health Consultancy Services',
+    description: 'Expert advisory services for public health programs, medical infrastructure, and government policy development.',
+    longDescription: 'We provide professional consultancy for health-related projects — from healthcare facility planning to epidemiological studies. Our goal is to help governments and organizations design and implement effective, evidence-based health solutions.',
+    benefits: [
+      'Strategic health policy planning',
+      'Healthcare facility design and feasibility studies',
+      'Public health assessment and data analytics',
+      'Regulatory guidance and quality assurance',
+      'Support for donor-funded health initiatives'
+    ],
+      icon:Droplets,
+      image: '/assets/Project-3.jpg',
+          caseStudy: {
+      title: 'Health System Strengthening for Local Government Areas',
+      challenge: 'A local government needed expert support to improve primary healthcare coverage and efficiency in resource allocation.',
+      solution: 'We conducted a comprehensive health needs assessment, developed a new facility management framework, and trained healthcare administrators.',
+      result: 'Patient coverage increased by 42%, with improved operational transparency across all local health centers.'
+    }
+  },
+  {
+    id: 'environmental-consulting',
+    title: 'Environmental Management & Advocacy',
+    description: 'Comprehensive environmental consultancy and advocacy services for sustainable development and compliance.',
+    longDescription: 'Our environmental consulting team provides Environmental Impact Assessments (EIA), audits, and sustainability planning for public and private projects. We also promote environmental advocacy to support green policies and responsible development.',
+    benefits: [
+      'Comprehensive EIA and audit reports',
+      'Regulatory compliance with NESREA and FMEnv standards',
+      'Pollution control and mitigation planning',
+      'Sustainability and waste management programs',
+      'Community awareness and advocacy initiatives'
+    ],
+      icon: Leaf,
+      image: 'assets/Project-4.jpg',
+     caseStudy: {
+      title: 'Environmental Audit for Industrial Park Development',
+      challenge: 'A new industrial park required a full environmental compliance audit before operation could begin.',
+      solution: 'We conducted a detailed EIA, implemented waste management systems, and developed an environmental monitoring plan.',
+      result: 'The project received full government approval and achieved a 30% reduction in environmental footprint compared to baseline levels.'
+    }
+  },
+  {
+    id: 'infrastructure-consulting',
+    title: 'Infrastructure Development Consulting',
+    description: 'Strategic consulting for sustainable infrastructure projects including roads, public buildings, and utilities.',
+    longDescription: 'We advise government and private clients on infrastructure planning, engineering design, and project supervision. Our services ensure that every project aligns with technical, economic, and environmental best practices.',
+    benefits: [
+      'Comprehensive feasibility and design studies',
+      'Supervision of civil and structural works',
+      'Procurement and material verification support',
+      'Adherence to national and international standards',
+      'Efficient coordination of multi-sector projects'
+    ],  
       icon: Gauge,
-      image: 'assets/rb-machines-4.webp',
+      image: 'assets/Project-9.jpeg',
       caseStudy: {
-        title: 'Municipal Water Management Plan',
-        challenge: 'A growing municipality needed to optimize its water distribution system to accommodate population growth while conserving resources.',
-        solution: 'We conducted a comprehensive assessment and developed a 10-year water management plan with phased implementation.',
-        result: 'The municipality reduced water losses by 30% through infrastructure improvements and implemented conservation measures that extended supply capacity by 15 years.'
-      }
-    },
-    {
-      id: 'water-quality',
-      title: 'Water Quality Testing & Monitoring',
-      description: 'Comprehensive water testing services using advanced laboratory techniques.',
-      longDescription: 'Our water quality testing and monitoring services provide accurate analysis of water sources for various parameters. We use advanced laboratory equipment and techniques to test for physical, chemical, and biological contaminants, ensuring compliance with Nigerian and international standards.',
-      benefits: [
-        'Accurate identification of contaminants and quality issues',
-        'Compliance with regulatory standards',
-        'Regular monitoring to maintain water quality',
-        'Detailed reports with actionable recommendations',
-        'Quick turnaround times for critical testing needs'
-      ],
+      title: 'Urban Road Rehabilitation Supervision Project',
+      challenge: 'A metropolitan council needed technical supervision for major road rehabilitation works across three districts.',
+      solution: 'We provided engineering consultancy, material testing, and project management oversight.',
+      result: 'Road network upgrades were completed ahead of schedule, improving traffic flow and reducing maintenance costs by 25%.'
+    }
+  },
+  {
+    id: 'procurement-supervision',
+    title: 'Procurement & Project Supervision',
+    description: 'End-to-end procurement and supervision services ensuring quality and accountability in project execution.',
+    longDescription: 'We specialize in transparent procurement and meticulous project oversight. Our team ensures that all materials, contractors, and workflows meet client expectations and statutory guidelines.',
+    benefits: [
+      'Transparent procurement and vendor evaluation',
+      'Strict quality control during project execution',
+      'Detailed progress and expenditure reporting',
+      'Timely delivery and cost optimization',
+      'Independent project auditing and verification'
+    ],
       icon: Beaker,
-      image: 'assets/rb-machine-test.webp',
-      caseStudy: {
-        title: 'Comprehensive Water Quality Program for Hospital',
-        challenge: 'A major hospital needed to ensure consistent water quality throughout its facility, particularly for sensitive medical applications.',
-        solution: 'We implemented a comprehensive water quality monitoring program with regular testing and an early warning system for contamination.',
-        result: 'The hospital has maintained perfect compliance with health standards and prevented potential contamination incidents through early detection.'
-      }
-    },
-    {
-      id: 'wastewater-management',
-      title: 'Wastewater Management Solutions',
-      description: 'Innovative wastewater treatment and management systems for various applications.',
-      longDescription: 'Our wastewater management solutions address the complete cycle of collection, treatment, and safe disposal or reuse. We design and implement systems for residential, commercial, and industrial clients, focusing on efficiency, regulatory compliance, and environmental protection.',
-      benefits: [
-        'Effective removal of contaminants from wastewater',
-        'Compliance with environmental regulations',
-        'Water recycling opportunities',
-        'Reduced environmental impact',
-        'Lower long-term operational costs'
-      ],
+      image: 'assets/Project-10.jpeg',
+     caseStudy: {
+      title: 'Procurement Oversight for Public Works Department',
+      challenge: 'The Public Works Department required independent procurement and quality verification for multiple state-level construction contracts.',
+      solution: 'We managed vendor selection, ensured compliance with procurement laws, and provided technical supervision during project execution.',
+      result: 'Procurement integrity was strengthened, and project delivery time was reduced by 20%.'
+    }
+  },
+  {
+    id: 'training-development',
+    title: 'Training & Capacity Building',
+    description: 'Customized professional training programs to enhance capacity across government and private sectors.',
+    longDescription: 'Our training and capacity development programs are designed to equip professionals with relevant skills in management, engineering, environmental sustainability, and health systems. We offer both on-site and virtual training solutions tailored to client needs.',
+    benefits: [
+      'Customized training modules for all sectors',
+      'Expert facilitators with local and international experience',
+      'Certification and post-training evaluation',
+      'Improved institutional performance and accountability',
+      'Hybrid (physical and online) training delivery options'
+    ],
       icon: Zap,
-      image: 'assets/rb-machine-7.webp',
-      caseStudy: {
-        title: 'Industrial Wastewater Recycling System',
-        challenge: 'A manufacturing facility needed to reduce its water consumption and minimize wastewater discharge to meet new environmental regulations.',
-        solution: 'We designed and implemented a closed-loop wastewater treatment and recycling system that allowed for water reuse in non-critical processes.',
-        result: 'The facility reduced fresh water consumption by 60% and wastewater discharge by 75%, saving costs and achieving full regulatory compliance.'
-      }
-    },
-    {
-      id: 'bottled-water',
-      title: 'Bottled Water Production Systems',
-      description: 'Complete engineering solutions for bottled water production facilities.',
-      longDescription: 'Our bottled water production systems provide end-to-end solutions for entrepreneurs and companies entering the bottled water market. We design, supply, install, and commission complete production lines, from water treatment to bottling, labeling, and packaging, ensuring compliance with NAFDAC and SON standards.',
-      benefits: [
-        'Turnkey solutions from design to commissioning',
-        'Compliance with Nigerian regulatory standards',
-        'Quality assurance throughout the production process',
-        'Scalable systems to grow with your business',
-        'Ongoing technical support and maintenance'
-      ],
+      image: 'assets/Project-7.jpg',
+     caseStudy: {
+      title: 'Capacity Building for State Environmental Agency',
+      challenge: 'An environmental agency needed to train officers in EIA compliance and monitoring.',
+      solution: 'We conducted a five-day intensive workshop covering compliance, auditing, and data reporting best practices.',
+      result: 'Over 100 officers were certified, improving environmental monitoring and enforcement efficiency across the state.'
+    }
+  },
+  {
+    id: 'community-development',
+    title: 'Community Development & Social Projects',
+    description: 'Design and implementation of community-centered programs that promote health, education, and sustainable livelihoods.',
+    longDescription: 'We partner with government agencies, NGOs, and private organizations to execute impactful social projects. Our community development approach emphasizes inclusivity, local participation, and measurable impact.',
+    benefits: [
+      'Community-focused project design',
+      'Stakeholder engagement and needs assessment',
+      'Sustainable impact evaluation',
+      'Integration with SDG-based development goals',
+      'Enhanced community welfare and empowerment'
+    ],
       icon: Factory,
-      image: 'assets/rb-machine-6.webp',
+      image: 'assets/Project-6.jpg',
       caseStudy: {
         title: 'New Bottled Water Production Facility',
         challenge: 'An entrepreneur wanted to establish a premium bottled water brand but lacked technical expertise in water production facilities.',
         solution: 'We designed and implemented a complete bottled water production line, including water treatment, bottling, capping, and packaging systems.',
         result: 'The facility was successfully commissioned and now produces 20,000 bottles per day, with all regulatory approvals and certifications in place.'
-      }
-    },
-    {
-      id: 'pure-water',
-      title: 'Pure Water (Sachet) Production Engineering',
-      description: 'Specialized engineering services for sachet water production systems in Nigeria.',
-      longDescription: 'Our pure water (sachet) production engineering services cater specifically to the Nigerian market\'s demand for affordable packaged water. We provide complete system design, equipment selection, installation, and commissioning for sachet water production lines, ensuring quality, efficiency, and compliance with NAFDAC standards.',
-      benefits: [
-        'Tailored solutions for the Nigerian market',
-        'NAFDAC compliance from day one',
-        'High-efficiency production systems',
-        'Quality control measures throughout the process',
-        'Scalable operations with growth potential'
-      ],
-      icon: Droplet,
-      image: 'assets/rb-industry.jpg',
-      caseStudy: {
-        title: 'Sachet Water Production Upgrade',
-        challenge: 'An existing sachet water producer needed to increase capacity and improve quality to meet growing demand and stricter regulations.',
-        solution: 'We redesigned their production system with advanced water treatment and a high-speed automated packaging line.',
-        result: 'Production capacity increased by 300%, quality improved to exceed regulatory standards, and operational costs per unit decreased by 25%.'
       }
     },
   ];
@@ -239,7 +218,7 @@ export function ServicesPage() {
                 className="text-xl opacity-90 max-w-2xl mb-8"
                 variants={fadeIn}
               >
-                Tailored water engineering solutions designed to address Nigeria's unique 
+                Tailored consultancy solutions designed to address Nigeria's unique 
                 challenges with innovation, expertise, and sustainability.
               </motion.p>
               <motion.div 
@@ -268,21 +247,21 @@ export function ServicesPage() {
                   <div className="space-y-4">
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
                       <Filter className="h-8 w-8 mb-2 text-primary-200" />
-                      <div className="font-semibold">Water Treatment</div>
+                      <div className="font-semibold">consultation</div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
                       <Droplets className="h-8 w-8 mb-2 text-primary-200" />
-                      <div className="font-semibold">Irrigation Systems</div>
+                      <div className="font-semibold">Health Innovation</div>
                     </div>
                   </div>
                   <div className="space-y-4 mt-8">
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
                       <Construction className="h-8 w-8 mb-2 text-primary-200" />
-                      <div className="font-semibold">Borehole Drilling</div>
+                      <div className="font-semibold">Enviromental Advocate</div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl">
                       <Droplet className="h-8 w-8 mb-2 text-primary-200" />
-                      <div className="font-semibold">Pure Water Production</div>
+                      <div className="font-semibold">General Contract Implimentation</div>
                     </div>
                   </div>
                 </div>
@@ -299,10 +278,8 @@ export function ServicesPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-lg text-gray-600">
-              At Rehoboth Glow Technology, we provide a comprehensive range of water engineering services 
-              designed to address Nigeria's unique water challenges. Whether you need industrial water treatment, 
-              borehole drilling, irrigation systems, or water production facilities, our expert team delivers 
-              innovative and sustainable solutions tailored to your specific requirements.
+              The organization is a multidisciplinary consultancy and capacity building firm that provides services across management training, research, ICT, business development, and corporate growth solutions. Its work spans from human resources and quality management to technical support, change management, and strategy development for institutions. Beyond consultancy, it is also engaged in general contracting, construction, agriculture, and trade, giving it a broad operational base that strengthens its relevance to diverse development initiatives.
+
             </p>
           </div>
           
@@ -408,7 +385,7 @@ export function ServicesPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-              Ready to Discuss Your Water Engineering Needs?
+              Ready to Discuss Your Consultancy Needs?
             </h2>
             <p className="text-xl mb-8">
               Our team of experts is ready to develop a customized solution for your specific water challenges.

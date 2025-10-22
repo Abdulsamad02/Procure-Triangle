@@ -11,7 +11,6 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -59,14 +58,14 @@ export function Navbar() {
         >
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5 relative overflow-hidden group">
-              <span className="sr-only">Rehoboth Glow Technology</span>
+              <span className="sr-only">General Consultant and Contractor</span>
               <div className="flex items-center gap-3 relative z-10">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary-600 to-primary-400 flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-                  <span className="text-white font-bold text-lg">RG</span>
+                  <span className="text-white font-bold text-lg">PT</span>
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-primary-700 group-hover:text-primary-600 transition-colors">Rehoboth Glow</div>
-                  <div className="text-xs text-primary-500">Technology Nigeria</div>
+                  <div className="text-lg font-bold text-primary-700 group-hover:text-primary-600 transition-colors">Procure Triangle</div>
+                  <div className="text-xs text-primary-500">General Consultant and Contractor</div>
                 </div>
               </div>
               <div className="absolute -bottom-2 -left-2 w-24 h-24 bg-primary-200/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -121,7 +120,7 @@ export function Navbar() {
               asChild
             >
               <Link to="/contact" className="flex items-center gap-1.5">
-                Get a Quote
+                Consult Us
                 <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
               </Link>
             </Button>
@@ -146,14 +145,14 @@ export function Navbar() {
         >
           <div className="flex items-center justify-between p-6">
             <Link to="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Rehoboth Glow Technology</span>
+              <span className="sr-only">Procure Triangle</span>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-600 to-primary-400 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">RG</span>
+                  <span className="text-white font-bold text-sm">PT</span>
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-primary-700">Rehoboth Glow</div>
-                  <div className="text-xs text-primary-500">Technology Nigeria</div>
+                  <div className="text-sm font-bold text-primary-700">Procure Triangle</div>
+                  <div className="text-xs text-primary-500">COnsultancy in Nigeria</div>
                 </div>
               </div>
             </Link>
@@ -195,14 +194,14 @@ export function Navbar() {
                   asChild
                 >
                   <Link to="/contact">
-                    Get a Quote
+                    Consult Us
                   </Link>
                 </Button>
                 <div className="mt-6 bg-gray-50 p-4 rounded-lg">
                   <p className="text-xs text-gray-500 mb-2">Need assistance?</p>
                   <div className="flex items-center gap-2 text-primary-600 font-medium">
                     <Phone className="h-4 w-4" />
-                    <a href="tel:+2341234567890">+234 123 456 7890</a>
+                    <a href="tel:+2341234567890">+234 706 076 8813</a>
                   </div>
                 </div>
               </div>

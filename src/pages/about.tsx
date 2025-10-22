@@ -29,27 +29,27 @@ export function AboutPage() {
   const coreValues = [
     {
       title: 'Excellence',
-      description: 'We maintain the highest standards in all aspects of our work, from engineering design to customer service.',
+      description: 'We maintain the highest standards in all aspects of our work, from consultancy to customer service.',
       icon: Award,
     },
     {
       title: 'Integrity',
-      description: 'We operate with honesty, transparency, and ethical conduct in all our business dealings.',
+      description: 'We operate with honesty, transparency, and ethical conduct in all our  dealings.',
       icon: Shield,
     },
     {
       title: 'Innovation',
-      description: 'We continuously seek new and better solutions to water engineering challenges.',
+      description: 'We continuously seek new and better solutions to general challenges.',
       icon: Target,
     },
     {
       title: 'Sustainability',
-      description: 'We are committed to environmentally responsible practices and water conservation.',
+      description: 'We are committed to environmentally responsible practices.',
       icon: CheckCircle,
     },
     {
       title: 'Community',
-      description: 'We recognize our role in supporting local communities through access to clean water.',
+      description: 'We recognize our role in supporting local communities through acces to primary health education.',
       icon: Users,
     },
     {
@@ -62,28 +62,22 @@ export function AboutPage() {
   // Team members data
   const teamMembers = [
     {
-      name: 'Engr. Samson Idoko',
-      position: 'Founder & CEO',
-      bio: 'With over 10 years in water engineering, Samson founded Rehoboth Glow Technology to address Nigeria\'s water challenges through innovative solutions.',
-      imageSrc: '/assets/rb-engineer-ceo2.jpg',
+      name: 'Mr. Teslim Lawal',
+      position: 'Director',
+      bio: 'With over 15 years in consultancy and business strategy, Mr. Teslim Lawal provides strong leadership and vision as our Director, ensuring every project aligns with excellence and growth.',
+      imageSrc: '/assets/teslim-pic.jpg',
     },
     {
-      name: 'Engr. Abdul Samad',
-      position: 'Engineer',
-      bio: 'A Graduate of Physics from the University of Abuja, Fatima oversees all technical aspects of our projects, ensuring they meet international standards.',
-      imageSrc: '/assets/rb-engineer.jpg',
+      name: 'Mr. Muhammad Bello',
+      position: 'Director',
+      bio: 'Mr. Muhammad Bello is known for his visionary leadership and commitment to excellence in every aspect of the company’s operations',
+      imageSrc: '/assets/muhammad-pic.jpg',
     },
     {
-      name: 'Eng. Ibrahim Ibrahim',
-      position: 'Engineer',
-      bio: 'Ibrahim is a graduate of Physics from the University of Abuja, with over 10 years of experience in water engineering.',
-      imageSrc: '/assets/rb-enginerr.jpg',
-    },
-    {
-      name: 'Mrs. Chioma Adeleke',
-      position: 'Business Development Manager',
-      bio: 'Chioma leads our client relationship management and business growth strategies across Nigeria.',
-      imageSrc: 'https://via.placeholder.com/400x400?text=Business+Development',
+      name: 'Ibrahim Ibrahim',
+      position: 'Admin Officer',
+      bio: 'Ibrahim is a graduate of Physics from the University of Abuja, with over 5 years of experience in Project management.',
+      imageSrc: '/assets/ibrahim.jpg',
     },
   ];
 
@@ -92,8 +86,8 @@ export function AboutPage() {
     <>
       <SEO 
         title="About Us"
-        description="Learn about Rehobothglow Technology - Nigeria's premier water engineering company with over 10 years of excellence in delivering innovative water solutions."
-        keywords="about Rehobothglow, water engineering company, Nigeria, company history, water solutions, team, mission, vision"
+        description="Learn about Procure Triangle - The organization is a multidisciplinary consultancy and capacity building firm that provides services across management training, research, ICT, business development, and corporate growth solutions. Its work spans from human resources and quality management to technical support, change management, and strategy development for institutions. Beyond consultancy, it is also engaged in general contracting, construction, agriculture, and trade, giving it a broad operational base that strengthens its relevance to diverse development initiatives."
+        keywords="about Procure Triangle, consultancy company, Nigeria, company history, consultancy solutions, team, mission, vision"
         ogUrl={getCanonicalUrl('about')}
       />
 
@@ -124,14 +118,13 @@ export function AboutPage() {
                 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
                 variants={fadeIn}
               >
-                About <span className="text-primary-200">Rehoboth Glow</span> Technology
+                About <span className="text-primary-200">Procure</span>Triangle
               </motion.h1>
               <motion.p 
                 className="text-xl opacity-90 max-w-2xl mb-8"
                 variants={fadeIn}
               >
-                Delivering innovative water engineering solutions across Nigeria since 2012,
-                with a commitment to excellence, sustainability, and community impact.
+                Dedicated to delivering exceptional solutions, focusing on quality, innovation, and client satisfaction. Let us turn your vision into reality with our expertise
               </motion.p>
               <motion.div 
                 className="flex flex-wrap gap-4"
@@ -157,12 +150,12 @@ export function AboutPage() {
                 <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-primary-300/20 rounded-full filter blur-3xl"></div>
                 <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-2xl">
                   <img 
-                    src="/assets/rb-facility-3.webp" 
-                    alt="About Rehoboth Glow"
+                    src="/assets/Project-10.jpeg" 
+                    alt="About Procure Triangle"
                     className="w-full h-auto rounded-lg shadow-lg"
                   />
                   <div className="absolute -bottom-5 -right-5 bg-primary-500 text-white p-4 rounded-xl shadow-lg">
-                    <div className="text-2xl font-bold">12+</div>
+                    <div className="text-2xl font-bold">10+</div>
                     <div className="text-sm">Years of Impact</div>
                   </div>
                 </div>
@@ -186,15 +179,14 @@ export function AboutPage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-primary-600">Our Mission</h3>
                   <p className="text-gray-600">
-                    To provide innovative, sustainable, and reliable water engineering solutions 
-                    that improve access to clean water and enhance quality of life across Nigeria.
+                    We aim to exceed client expectations by reliable projects with precision.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-primary-600">Our Vision</h3>
                   <p className="text-gray-600">
-                    To be Nigeria's leading water engineering company, recognized for excellence, 
-                    innovation, and commitment to solving the country's water challenges.
+                    To be Nigeria's leading consultancy company, recognized for excellence, 
+                    innovation, and commitment to solving the country's challenges.
                   </p>
                 </div>
                 <div className="pt-4">
@@ -207,7 +199,7 @@ export function AboutPage() {
             </div>
             <div>
               <img 
-                src="/assets/rb-series-2.webp" 
+                src="/assets/logo.jpg" 
                 alt="Rehoboth Glow mission"
                 className="rounded-lg shadow-lg"
               />
@@ -331,11 +323,11 @@ export function AboutPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-              Partner with Rehoboth Glow Technology
+              Partner with Procure Triangle
             </h2>
             <p className="text-xl mb-8">
-              Join hundreds of satisfied clients who trust us with their water engineering needs.
-              Let's work together to create sustainable water solutions for your project.
+              Join hundreds of satisfied clients who trust us with their problem solving  needs.
+              Let's work together to create sustainable solutions for your project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-white text-primary-700 hover:bg-gray-100" asChild>

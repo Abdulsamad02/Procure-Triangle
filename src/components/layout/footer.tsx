@@ -8,23 +8,17 @@ const navigation = {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ],
   services: [
-    { name: 'Water Treatment Systems', href: '/services#water-treatment' },
-    { name: 'Borehole Drilling', href: '/services#borehole-drilling' },
-    { name: 'Irrigation Systems', href: '/services#irrigation-systems' },
-    { name: 'Water Resource Management', href: '/services#water-management' },
-    { name: 'Bottled Water Production', href: '/services#bottled-water' },
-    { name: 'Pure Water Production', href: '/services#pure-water' },
+    { name: ' Project & Contract Execution', href: '/services#water-treatment' },
+    { name: 'Health Consultancy Services', href: '/services#borehole-drilling' },
+    { name: 'Environmental Management ', href: '/services#irrigation-systems' },
+    { name: 'Infrastructure Development', href: '/services#water-management' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News', href: '/blog' },
-    { name: 'Client Portal', href: '/client-portal' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -66,15 +60,15 @@ export function Footer() {
             <div className="space-y-8 xl:col-span-1">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                  <span className="text-primary-700 font-bold text-lg">RG</span>
+                  <span className="text-primary-700 font-bold text-lg">PT</span>
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-white">Rehoboth Glow</div>
-                  <div className="text-xs text-primary-200">Technology Nigeria</div>
+                  <div className="text-lg font-bold text-white">Procure Triangle</div>
+                  <div className="text-xs text-primary-200">Consultancy Nigeria</div>
                 </div>
               </div>
               <p className="text-sm leading-6 text-primary-100">
-                Innovative water engineering solutions for Nigeria's future. Providing high-quality water treatment systems and services since 2012.
+                Structura is dedicated to creating innovative, sustainable, and impactful solutions.
               </p>
               <div className="flex space-x-6">
                 {navigation.social.map((item) => (
@@ -135,11 +129,11 @@ export function Footer() {
                     </li>
                     <li className="flex gap-x-3">
                       <Phone className="h-5 w-5 flex-none text-primary-200" aria-hidden="true" />
-                      <span className="text-sm leading-6 text-primary-100">+234 123 456 7890</span>
+                      <span className="text-sm leading-6 text-primary-100">+234 706 076 8813</span>
                     </li>
                     <li className="flex gap-x-3 flex-wrap">
                       <Mail className="h-5 w-5 flex-none text-primary-200" aria-hidden="true" />
-                      <span className="text-sm leading-6 text-primary-100 wrap">info@rehobothglow.com</span>
+                      <span className="text-sm leading-6 text-primary-100 wrap">procurestics@gmail.com </span>
                     </li>
                   </ul>
                 </div>
@@ -149,7 +143,7 @@ export function Footer() {
           
           <div className="mt-16 border-t border-primary-700 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-xs max-md:text-center text-primary-200">
-              &copy; {new Date().getFullYear()} Rehoboth Glow Technology Nigeria. All rights reserved.
+              &copy; {new Date().getFullYear()} Procure Triangle Nigeria. All rights reserved.
             </div>
             <div className="mt-4 md:mt-0 flex space-x-6 text-sm">
               {navigation.legal.map((item) => (

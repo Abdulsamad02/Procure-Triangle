@@ -8,7 +8,6 @@ import { HomePage } from './pages/home';
 import { AboutPage } from './pages/about';
 import { ServicesPage } from './pages/services';
 import { ProjectsPage } from './pages/projects';
-import { BlogPage } from './pages/blog';
 import { ContactPage } from './pages/contact';
 import { NotFoundPage } from './pages/not-found';
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="about" element={<AboutPage />} />
             <Route path="services" element={<ServicesPage />} />
             <Route path="projects" element={<ProjectsPage />} />
-            <Route path="blog" element={<BlogPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>

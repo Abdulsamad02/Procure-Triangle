@@ -1,5 +1,5 @@
 // Base URL for the website
-const BASE_URL = 'https://rehobothglow.com';
+const BASE_URL = 'https://procuretriangle.com';
 
 /**
  * Generates a full canonical URL for a specific path

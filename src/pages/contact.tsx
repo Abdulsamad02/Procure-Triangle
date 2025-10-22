@@ -71,25 +71,21 @@ export function ContactPage() {
   // Project types
   const projectTypes = [
     { value: '', label: 'Select project type' },
-    { value: 'water-treatment', label: 'Water Treatment System' },
-    { value: 'borehole-drilling', label: 'Borehole Drilling' },
-    { value: 'irrigation-system', label: 'Irrigation System' },
-    { value: 'bottled-water', label: 'Bottled Water Production' },
-    { value: 'pure-water', label: 'Pure Water (Sachet) Production' },
-    { value: 'water-management', label: 'Water Resource Management' },
-    { value: 'wastewater', label: 'Wastewater Management' },
-    { value: 'water-quality', label: 'Water Quality Testing' },
-    { value: 'consultation', label: 'General Consultation' },
-    { value: 'other', label: 'Other' },
+    { value: 'Health Consultancy Services', label: 'Health Consultancy Services' },
+    { value: 'Environmental Management & Advocacy', label: 'Environmental Management & Advocacy' },
+    { value: 'Infrastructure Development Consulting', label: 'Infrastructure Development Consulting' },
+    { value: 'Procurement & Project Supervision', label: 'Procurement & Project Supervision' },
+    { value: 'Training & Capacity Building', label: 'Training & Capacity Building' },
+    { value: 'Community Development & Social Projects', label: 'Community Development & Social Projects' },
   ];
   
   // Office locations
   const offices = [
     {
       name: 'Abuja Office',
-      address: '456 Marina Street, Victoria Island, Lagos, Nigeria',
-      phone: '+234 810 373 2519',
-      email: 'rehobothglowtech@gmail.com',
+      address: '50 herper cricent Abuja, Nigeria',
+      phone: '+234 706 076 8813',
+      email: 'procurestics@gmail.com',
       hours: 'Monday - Friday: 8:00 AM - 5:00 PM',
     },
   ];
@@ -105,26 +101,26 @@ export function ContactPage() {
   const faqs = [
     {
       question: 'What areas in Nigeria do you serve?',
-      answer: 'We provide water engineering services throughout Nigeria, with offices in Abuja, Lagos, and Port Harcourt. Our projects span across all states and regions of the country.',
+      answer: 'We provide various consultancy services throughout Nigeria, with offices in Abuja and Kaduna. Our projects span across all states and regions of the country.',
     },
     {
-      question: 'How long does it typically take to complete a water treatment project?',
+      question: 'How long does it typically take to complete a  project?',
       answer: 'Project timelines vary based on scope and complexity. Small residential systems may take 1-2 weeks, while large industrial or municipal projects can range from 2-6 months. We provide detailed timelines during consultation.',
     },
     {
-      question: 'Do you offer maintenance services for existing water systems?',
-      answer: 'Yes, we provide comprehensive maintenance services for all types of water systems, including those not originally installed by us. We offer both scheduled maintenance plans and emergency repair services.',
+      question: 'Do you offer maintenance services for existing  systems?',
+      answer: 'Yes, we provide comprehensive maintenance services for all types of  systems, including those not originally installed by us. We offer both scheduled maintenance plans and emergency repair services.',
     },
     {
       question: 'What certifications and standards do your water systems meet?',
       answer: 'Our systems comply with Nigerian standards (SON, NAFDAC) as well as international standards including WHO guidelines. We\'re ISO 9001 and ISO 14001 certified, ensuring quality and environmental responsibility.',
     },
     {
-      question: 'Can you help with NAFDAC registration for bottled/sachet water production?',
+      question: 'Can you help with NAFDAC registration?',
       answer: 'Yes, we provide comprehensive support for NAFDAC registration, including facility design to meet requirements, documentation preparation, and guidance throughout the approval process.',
     },
     {
-      question: 'Do you offer financing options for water projects?',
+      question: 'Do you offer financing options for  projects?',
       answer: 'We work with several financial partners who offer financing options for qualified clients. During consultation, we can discuss available financing options tailored to your project needs.',
     },
   ];
@@ -133,8 +129,8 @@ export function ContactPage() {
     <>
       <SEO 
         title="Contact Us"
-        description="Get in touch with Rehobothglow Technology's water engineering experts for consultations, quotes, or to discuss your specific water challenges."
-        keywords="contact Rehobothglow, water engineering consultation, Nigeria water services, get a quote, water solutions contact"
+        description="Get in touch with Procure Triangle   experts for consultations, quotes, or to discuss your specific  challenges."
+        keywords="contact ProcureTriangle,  engineering, consultation, Nigeria  services, get a quote, water  contact Procure Triangle, Procurement and Consulting Firm, Infrastructure Development Consultants, Environmental Management & Advocacy, Health Consultancy Services, Project Execution and Management, Sustainable Development Solutions, Capacity Building and Training, Contract Execution Services Nigeria, Technical and Management Consultancy, Procurement Solutions Provider, Construction and Engineering Consulting, Environmental Compliance Experts, Public and Private Sector Projects, Corporate Growth and Development Consulting"
         ogUrl={getCanonicalUrl('contact')}
       />
       
@@ -172,8 +168,8 @@ export function ContactPage() {
                 className="text-xl opacity-90 max-w-2xl mb-8"
                 variants={fadeIn}
               >
-                Reach out to our water engineering experts for consultations, quotes, 
-                or to discuss your specific water challenges.
+                Reach out to our  experts for consultations, quotes, 
+                or to discuss your specific  challenges.
               </motion.p>
               <motion.div 
                 className="flex flex-wrap gap-4"
@@ -186,7 +182,7 @@ export function ContactPage() {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 gap-2 bg-white/10 text-white border-white hover:bg-white/20" asChild>
-                  <a href="mailto:rehobothglowtech@gmail.com" className='flex gap-2'>
+                  <a href="mailto:procurestics@gmail.com" className='flex gap-2'>
                     <Mail className="h-5 w-5" />
                     <span>Email Us</span>
                   </a>
@@ -211,7 +207,7 @@ export function ContactPage() {
                       </div>
                       <div>
                         <div className="text-sm opacity-80">Call Us</div>
-                        <div className="font-semibold">+234 810 373 2519</div>
+                        <div className="font-semibold">+234 706 076 8813</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -220,7 +216,7 @@ export function ContactPage() {
                       </div>
                       <div>
                         <div className="text-sm opacity-80">Email Us</div>
-                        <div className="font-semibold">rehobothglowtech@gmail.com</div>
+                        <div className="font-semibold">procurestics@gmail.com</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -261,7 +257,7 @@ export function ContactPage() {
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Whether you have a specific project in mind or just want to learn more about our 
-                water engineering services, our team is ready to help. Fill out the form below, 
+                c services, our team is ready to help. Fill out the form below, 
                 and one of our experts will get back to you within 24 hours.
               </p>
               
@@ -272,8 +268,8 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Call Us</h3>
-                    <p className="text-gray-600">+234 810 373 2519</p>
-                    <p className="text-gray-600">+234 807 408 1472</p>
+                    <p className="text-gray-600">+234 706 076 8813</p>
+                    <p className="text-gray-600">+234 706 076 8813</p>
                   </div>
                 </div>
                 
@@ -283,7 +279,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email Us</h3>
-                    <p className="text-gray-600">rehobothglowtech@gmail.com</p>
+                    <p className="text-gray-600">procurestics@gmail.com</p>
                   </div>
                 </div>
                 
@@ -293,18 +289,18 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">WhatsApp</h3>
-                    <p className="text-gray-600">+234 810 373 2519</p>
+                    <p className="text-gray-600">+234 706 076 8813 </p>
                     <p className="text-gray-500 text-sm">(For quick inquiries and emergencies)</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-8 p-6 bg-primary-50 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2">Emergency Water Services</h3>
+                <h3 className="font-semibold text-lg mb-2">Emergency  Services</h3>
                 <p className="text-gray-600 mb-4">
-                  For urgent water system issues or emergencies, please call our 24/7 emergency line:
+                  For urgent  system issues or emergencies, please call our 24/7 emergency line:
                 </p>
-                  <div className="text-xl font-bold text-primary-700">+234 810 373 2519</div>
+                  <div className="text-xl font-bold text-primary-700">+234 706 076 8813</div>
               </div>
             </div>
             
@@ -555,22 +551,22 @@ export function ContactPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-              Ready to Transform Your Water Systems?
+              Ready to Transform Your ideas into Reality?
             </h2>
             <p className="text-xl mb-8">
-              Contact us today to discuss how we can help with your water engineering needs.
+              Contact us today to discuss how we can help with consultancy  needs.
               We're ready to provide expert consultation and innovative solutions.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mx-auto">
               <div className="bg-white/10 rounded-lg p-6 text-center ">
                 <Phone className="h-8 w-8 mx-auto mb-2" />
                 <p className="text-lg font-semibold">Call Us Now</p>
-                <p className="text-xl font-bold">+234 810 373 2519</p>
+                <p className="text-xl font-bold">+234 706 076 8813</p>
               </div>
               <div className="bg-white/10 rounded-lg p-6 text-center">
                 <Mail className="h-8 w-8 mx-auto mb-2" />
                 <p className="text-lg font-semibold">Email Us</p>
-                <p className="text-xl font-bold">rehobothglowtech@gmail.com</p>
+                <p className="text-xl font-bold">procurestics@gmail.com</p>
               </div>
             </div>
           </div>
